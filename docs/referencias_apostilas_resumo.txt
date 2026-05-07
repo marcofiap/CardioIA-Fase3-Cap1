@@ -1,0 +1,1080 @@
+
+
+===== 2TIAOA - Fase 3 - Cap01 - CardioIA Conectada IoT e Visualização de Dados para a Saúde Digital_RevFinal.pdf =====
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+ 
+  
+CARDIOIA
+CONECTADA: IOT
+E
+VISUALIZAÇÃO
+DE DADOS PARA A
+SAÚDE DIGITAL
+01
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+SUMÁRIO 
+1 CARDIOIA CONECTADA: IOT E VISUALIZAÇÃO DE DADOS PARA A SAÚDE 
+DIGITAL .................................................................................................................... 3 
+1.1 AI for Robotic Process Automation ...................................................................... 3 
+1.2 Cluster Computing, Computação Neuromórfica e Supercomputadores .............. 4 
+1.3 Computação Quântica & IA ................................................................................. 4 
+1.4 Front End & Mobile Development ........................................................................ 4 
+1.5 Generative AI & Advanced Nets .......................................................................... 5 
+1.6 Governança em IA e Business Analytics ............................................................. 5 
+1.7 Physical Computing, Embedded IA, Robotics & Cognitive IoT ............................ 6 
+1.8 Processamento de Linguagem Natural, Chatbots & Virtual Agents .................... 6 
+1.9 Visão Computacional........................................................................................... 7 
+CONCLUSÃO ............................................................................................................ 8 
+ 
+ 
+ 
+  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+1 CARDIOIA CONECTADA: IOT E VISUALIZAÇÃO DE DADOS PARA 
+A SAÚDE DIGITAL 
+A Fase 3 representa um ponto de virada no curso, pois deixa de tratar cada 
+tecnologia isoladamente e passa a integrá -las em um ecossistema unificado. Agora, 
+o desafio é mais profundo: desenvolver soluções inteligentes que conectem 
+algoritmos, infraestrutura e experiência do usuário em aplicações reais. 
+ Neste contexto, o projeto CardioIA continua sendo o fio condutor. A cada 
+capítulo, vocês vão explorar tecnologias que se complementam, desde a automação 
+inteligente até a visão computacional, formando um ciclo completo de inovação. O 
+foco é transformar dados em informações clínicas relevantes, com governança e 
+escalabilidade, enquanto as interfaces front-end e mobile aproximam a tecnologia dos 
+profissionais de saúde e pacientes. 
+ Assim, a Fase 3 amplia o seu olhar: não basta apenas aprender ferramentas, 
+mas compreender como integrá -las em soluções que atendam às necessidades 
+críticas do mercado, especialmente em áreas sensíveis como a saúde. O aprendizado 
+ganha contornos práticos e empreendedores, preparando os estudantes para desafios 
+reais. 
+1.1 AI for Robotic Process Automation 
+Neste capítulo, você descobrirá como a automação de processos deixa de ser 
+apenas um “atalho” e passa a ser um motor estratégico para startups como a CardioIA. 
+Ao explorar o uso de protocolos de comunicação REST e integrações com e -mail, 
+mostramos como fluxos manuais podem ser transformados em processos ágeis e 
+confiáveis, reduzindo falhas e acelerando decisões. 
+ Na prática da CardioIA, isso significa que relatórios de pacientes, alertas 
+médicos ou resultados de monitoramento cardíaco podem ser enviados 
+automaticamente a partir da plataforma, conectando -se com sistemas externos e 
+garantindo que nenhuma informação crítica se perca. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+Aqui, automação não é apenas eficiência: é salvar vidas por meio da 
+comunicação inteligente. 
+1.2 Cluster Computing, Computação Neuromórfica e Supercomputadores 
+Você vai mergulhar em como os chips neuromórficos imitam o cérebro humano 
+para processar informações de forma rápida e energética. Exploramos os exemplos 
+da IBM TrueNorth e do Intel Loihi, mostrando como eles revolucionam a maneira como 
+as máquinas aprendem e se adaptam.  
+Para a CardioIA, essa tecnologia abre a possibilidades para algoritmos muito 
+mais avançados e poderosos, capazes de detectar arritmias e padrões cardíacos com 
+uma massa de dados gigantesca. 
+1.3 Computação Quântica & IA 
+A Computação Quântica parece algo distante, mas aqui ela é explicada de 
+forma clara: qubits, superposição e emaranhamento deixam de ser mistérios e se 
+tornam ferramentas para resolver problemas impossíveis aos computadores 
+clássicos. 
+Na jornada da CardioIA, isso signifi ca vislumbrar um futuro em que cálculos 
+complexos sobre grandes populações de pacientes possam ser feitos em segundos, 
+permitindo prever riscos cardíacos com precisão inédita. 
+A tecnologia quântica é o horizonte para análises médicas mais profundas e 
+preditivas. 
+1.4 Front End & Mobile Development 
+Este capítulo mostra como transformar ideias em interfaces reais. Com 
+ReactJS e Vite, você aprenderá a criar uma aplicação web moderna, rápida e 
+responsiva — exatamente o que a CardioIA precisa par a oferecer dashboards 
+intuitivos a médicos e pacientes. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+O coração do projeto não está apenas no algoritmo, mas também na 
+experiência do usuário. Se o cardiologista consegue visualizar tendências e se o 
+paciente acessa informações de forma clara, a tecnologia cumpre sua missão. 
+Aqui, código e design se encontram para salvar vidas. 
+1.5 Generative AI & Advanced Nets 
+Nesta disciplina, entraremos no mundo da IA criativa, onde GANs não apenas 
+reconhecem dados, mas geram novos cenários, imagens e informações. Ente nder 
+esses modelos é compreender como a Inteligência Artificial pode criar realidades 
+plausíveis a partir de padrões aprendidos. 
+Para a CardioIA, essa capacidade significa gerar cenários simulados de 
+evolução de um paciente ou criar datasets sintéticos par a treinar algoritmos quando 
+os dados reais forem limitados. 
+Criatividade computacional, neste caso, é sinônimo de inovação médica e 
+preparação para o inesperado. 
+1.6 Governança em IA e Business Analytics 
+Sem dados organizados, nenhuma startup escala de ver dade. Aqui, 
+apresentaremos os frameworks de governança e as arquiteturas modernas — como 
+Data Lakes e Feature Stores, que garantem segurança, qualidade e conformidade 
+regulatória. 
+A CardioIA, ao lidar com dados médicos sensíveis, precisa aplicar essas 
+práticas desde cedo. 
+Governança não é burocracia, mas a base para conquistar confiança de hospitais 
+e pacientes, além de assegurar conformidade com legislações como a LGPD. 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+1.7 Physical Computing, Embedded IA, Robotics & Cognitive IoT 
+A nuvem é o ambiente onde as ideias ganham escala. 
+Essa disciplina mostrará como  o cloud computing oferece elasticidade, 
+armazenamento seguro e poder de processamento para soluções IoT. 
+ A CardioIA depende disso para consolidar dados de sensores vestíveis, cruzar 
+informações de m ilhares de pacientes e disponibilizar relatórios acessíveis em 
+qualquer lugar. A nuvem é o motor que transforma dados individuais em inteligência 
+coletiva para a saúde. 
+Quando a latência pode custar uma vida, processar dados localmente é essencial.  
+Em Physical Computing, Embedded AI, Robotics & Cognitive I oT, você verá 
+como fog e edge computing reduzem atrasos, aliviam a nuvem e garantem maior 
+resiliência nos sistemas IoT. 
+ Na prática da CardioIA, significa que um sensor de batimento pode emitir 
+alertas imediatos, mesmo sem internet, garantindo monitoramento contínuo. Fog e 
+edge tornam a inteligência verdadeiramente próxima do coração. 
+1.8 Processamento de Linguagem Natural, Chatbots & Virtual Agents 
+Antes das redes neurais modernas, a estatística já ajudava a máquina a 
+entender a linguagem humana. Aqui, revisitaremos modelos como n-grams, HMM e 
+técnicas de representação vetorial, essenciais para lidar com textos. 
+Na CardioIA, esses métodos podem ser utilizados para analisar relatos 
+médicos, descrições de sintomas ou até mensagens enviadas por pacientes. 
+Ferramentas clássicas continuam relevantes para tornar a comunicação entre humano 
+e máquina mais clara e confiável. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+1.9 Visão Computacional 
+E, por fim, na Visão Computacional aprenderemos como saber o que observar. 
+Você aprenderá técnicas para segmentar imagens e extrair características que 
+realmente importam, de bordas a texturas, de SIFT a ORB. 
+Na CardioIA, isso pode ser aplicado para interpretar exames médicos, detectar 
+padrões em ecocardiogramas ou identificar anomalias em imagens de ressonância. 
+Cada pixel ganha significado quando transformado em informação clínica útil.  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital
+CONCLUSÃO 
+Ao longo da Fase 3, cada capítulo conduzirá você e s ua equipe a uma 
+dimensão específica da Inteligência Artificial. Por exemplo: a automação mostra como 
+agilizar processos ; a computação neuromórfica e computação quântica apontam 
+novos horizontes de processamento ; o front-end e o mobile dão forma à interação  
+humano-máquina; a IA Generativa expande as possibilidades criativas; a governança 
+garante confiança e conformidade ; a IoT cognitiva conecta dispositivos e dados em 
+tempo real; o NLP amplia a comunicação natural; e a visão computacional traz novos 
+olhos digitais para interpretar o mundo. 
+ Conclui-se que a verdadeira força desta fase está na integração. Vocês não 
+apenas estudarão conceitos avançados, mas aprenderão a combiná-los para construir 
+sistemas inteligentes e aplicáveis. O CardioIA exemplifica essa j ornada: um projeto 
+que une ciência, tecnologia e impacto social, mostrando que a IA é tanto ferramenta 
+de inovação quanto ponte para transformar a sociedade. 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+
+===== 2TIAOA - Fase 3 - Cap02 - REST e E-mail como Motores de Processos em RPA_RevFinal.pdf =====
+REST e E-mail como Motores de Processos em RPA
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+REST E E-MAIL
+COMO MOTORES DE
+PROCESSOS EM
+RPA
+02
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+LISTA DE FIGURAS 
+Figura 1 - Funcionamento do protocolo http .............................................................. 13 
+Figura 2 - Exemplo de requisição .............................................................................. 15 
+Figura 3 - Exemplo de resposta ................................................................................ 17 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+ 
+LISTA DE QUADROS 
+Quadro 1 - Métodos Http ........................................................................................... 19 
+Quadro 2 - Códigos de resposta http comumente utilizados ..................................... 21 
+ 
+ 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+ 
+LISTA DE CÓDIGOS-FONTE 
+Código-fonte 1 - Consumo de serviços simples com Python .................................... 28 
+Código-fonte 2 - Uso de Método Get ......................................................................... 29 
+Código-fonte 3 - Uso de Método POST ..................................................................... 30 
+Código-fonte 4 - Uso de Método PUT ....................................................................... 31 
+Código-fonte 5 - Uso de Método PATCH .................................................................. 32 
+Código-fonte 6 - Exemplo de método DELETE ......................................................... 32 
+Código-fonte 7 - Consumo de APIs com tokens JWT ............................................... 34 
+Código-fonte 8 - Exemplo de envio de e-mails com SMTP ....................................... 40 
+Código-fonte 9 - Exemplo de recebimento de e-mails com POP3 ............................ 43 
+Código-fonte 10 - Exemplo de recebimento de e-mails com IMAP ........................... 46 
+Código-fonte 11 - Exemplo de Caso Integrado ......................................................... 50 
+  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+LISTA DE COMANDOS DE PROMPT DO SISTEMA OPERACIONAL 
+Comando de prompt 1 - Consumo de serviço com curl ............................................ 28 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+   
+ 
+SUMÁRIO 
+1 REST E E-MAIL COMO MOTORES DE PROCESSOS EM RPA .......................... 7 
+1.1 Introdução ........................................................................................................... 7 
+2 API REST: FUNDAMENTOS E PRINCÍPIOS ........................................................ 9 
+2.2 O Protocolo HTTP ............................................................................................... 10 
+2.2.1 A origem e evolução do protocolo HTTP: motivações e primeiros usos .......... 10 
+2.2.2 Funcionamento do protocolo http ..................................................................... 12 
+2.2.3 Estrutura da requisição HTTP .......................................................................... 13 
+2.2.4 Estrutura da resposta HTTP ............................................................................. 15 
+2.2.5 Métodos HTTP ................................................................................................. 18 
+2.2.6 Códigos de resposta HTTP .............................................................................. 19 
+3 DE VOLTA AO REST ............................................................................................. 23 
+3.1 Consumindo serviços REST ou REST APIs ........................................................ 25 
+3.1.1 Consumo de REST APIs em Python ................................................................ 26 
+3.1.2 Todas operações básicas ................................................................................. 29 
+3.1.3 Controle de acesso a APIs com tokens JWT ................................................... 33 
+3.1.4 Consumo de API com JWT .............................................................................. 34 
+4 ENVIO E RECEBIMENTO DE E-MAILS COM SMTP, POP3 E IMAP: UMA 
+ANÁLISE ESTRUTURADA DOS PROTOCOLOS DE CORREIO ELETRÔNICO ..... 37 
+4.1 Arquitetura geral do sistema de e-mail ................................................................ 37 
+4.2 SMTP: Simple Mail Transfer Protocol ................................................................. 38 
+4.3 POP3: Post Office Protocol (Versão 3) ............................................................... 41 
+4.4 IMAP: Internet Message Access Protocol ........................................................... 44 
+4.5 Caso de uso automação de confirmação médica via e-mail: monitoramento IMAP 
+com resposta SMTP .................................................................................................. 48 
+CONCLUSÃO ............................................................................................................ 52 
+REFERÊNCIAS ......................................................................................................... 54 
+ 
+ 
+  
+  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+1 REST E E-MAIL COMO MOTORES DE PROCESSOS EM RPA 
+1.1 Introdução 
+Vivemos em uma era na qual a informação tornou -se o recurso mais valioso 
+para a automação de processos, a análise de dados e a tomada de decisões 
+inteligentes. Contudo, embora a web contenha volumes colossais de dados acessíveis 
+publicamente, nem sempre essas informações estão disponíveis de forma 
+estruturada, padronizada ou amigável à leitura por máquinas. Diante disso, diversas 
+estratégias de acesso programático à informação web emergiram como ferramentas 
+indispensáveis par a desenvolvedores, cientistas de dados e engenheiros de 
+automação. Estas estratégias variam em robustez, formalismo e complexidade — e 
+incluem, entre outras, o consumo de APIs RESTful, a prática de web scraping, a leitura 
+de arquivos estruturados e até mes mo a exploração de feeds, endpoints ocultos e 
+dados abertos governamentais. 
+O primeiro e mais robusto mecanismo de extração é o uso de APIs formais, 
+projetadas justamente para permitir que os sistemas interajam com dados remotos de 
+forma padronizada. APIs RESTful, GraphQL, SOAP e outras variantes oferecem 
+pontos de acesso estáveis, geralmente documentados, que permitem operações 
+específicas sobre recursos definidos, com respostas tipicamente no formato JSON ou 
+XML. Essas APIs são consideradas o “caminho ofi cial” para a obtenção de dados de 
+um sistema remoto e, por isso, são preferidas sempre que disponíveis. Para o 
+consumidor, elas oferecem confiabilidade, versionamento, controle de acesso e 
+previsibilidade — elementos fundamentais em sistemas corporativos o u produtos de 
+software em larga escala. 
+Entretanto, existem inúmeros cenários nos quais APIs não estão disponíveis, 
+seja por decisão estratégica do fornecedor dos dados, seja pela inexistência de uma 
+camada de integração formal. Nestes casos, recorre -se à técnica conhecida como 
+web scraping, que consiste na extraçã o de dados diretamente a partir do conteúdo 
+HTML das páginas da web. Embora essa prática seja menos formal e , por vezes, 
+controversa do ponto de vista legal ou ético, ela continua sendo uma ferramenta vital 
+para a automação de consultas, coleta de preços, extração de notícias, análise de 
+concorrência e uma infinidade de outras aplicações. O scraping exige um olhar atento 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+à estrutura das páginas e ao uso de ferramentas como seletores CSS, expressões 
+XPath e navegadores automatizados (ex emplo: Selenium, Playw right) para acessar 
+conteúdos dinâmicos. 
+Além das APIs e do scraping, existem outras formas de acessar dados na web. 
+Alguns sites disponibilizam planilhas, arquivos CSV, JSON ou XML diretamente para 
+download. Outros oferecem feeds RSS ou Atom, frequentemen te usados por portais 
+de notícias. Há ainda mecanismos de captura de informação que envolvem webhooks, 
+integrações assíncronas, ou o uso de sistemas intermediários como serviços de ETL 
+ou brokers de mensagens (Kafka, MQTT). Em todos os casos, o denominador comum 
+é a capacidade de um agente humano ou automatizado interpretar os dados obtidos 
+e integrá-los ao seu fluxo de trabalho. 
+É justamente sobre esses mecanismos de obtenção de dados que este capítulo 
+se desenvolve. Embora o foco esteja na integração por meio de APIs RESTful 
+seguras, será necessário compreender em profundidade como as URLs são 
+estruturadas, como interpretar uma resposta JSON, e como manter sessões 
+autenticadas com tokens como JWT. Ao longo das seções seguintes, o leitor 
+aprenderá a operar como consumidor de serviços remotos, acessando dados com 
+precisão, respeitando os protocolos esperados e extraindo valor a partir de fontes 
+externas, de forma segura e replicável.  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+2 API REST: FUNDAMENTOS E PRINCÍPIOS 
+Nos ecossistemas computacionais modern os, as APIs desempenham papel 
+central como mecanismos de integração entre sistemas, permitindo que aplicações 
+distintas — escritas em diferentes linguagens, executadas em diferentes ambientes e 
+pertencentes a diferentes domínios — sejam capazes de se  comunicar de maneira 
+previsível, estruturada e sem acoplamento físico. Entre os estilos arquiteturais de APIs 
+existentes, o mais difundido no contexto da web é o REST ( Representational State 
+Transfer), um modelo de arquitetura que se apoia nos princípios fundam entais do 
+protocolo HTTP (Hypertext Transfer Protocol) e na ideia de que tudo em um sistema 
+pode ser modelado como um recurso. 
+O termo REST foi introduzido por Roy Fielding em sua tese de doutorado no 
+ano 2000, e rapidamente se consolidou como padrão de fa to para a construção de 
+sistemas escaláveis e interoperáveis. Seu sucesso reside na simplicidade e na 
+aderência aos princípios que regem a própria web. Para o consumidor, isso representa 
+um ganho enorme: ao aprender a consumir uma API REST, ele adquire competências 
+transferíveis para dezenas, senão centenas, de outros serviços. Em outras palavras,  
+o REST promove a padronização da comunicação entre cliente e servidor, mesmo em 
+contextos heterogêneos. 
+Do ponto de vista do consumidor, a API REST se apresenta como uma coleção 
+de URIs (identificadores de recursos) combinada com um conjunto limitado de 
+operações semânticas baseadas nos verbos HTTP. Essas operações — GET, POST, 
+PUT, DELETE, PATCH — indicam se o cliente deseja ler, criar, atualizar ou excluir 
+um recurso. Os recursos em si são entidades do mundo real modeladas de forma 
+conceitual, como clientes, produtos, pedidos, artigos, e ntre outros , e suas 
+representações são transferidas geralmente no formato JSON, que oferece um bom 
+equilíbrio entre legibilidade, leveza e suporte a estruturas aninhadas. 
+Tomemos como exemplo uma API de e -commerce. Nela, o recurso “produto” 
+pode ser acessado por meio da URI https://api.loja.com/produtos. A requisição GET 
+/produtos retorna a lista de todos os produtos, enquanto GET /produtos/42 retorna os 
+detalhes de um produto específico. Se o consumidor deseja cadastrar um novo item, 
+ele usa POST /produtos, enviando os dados no corpo da requisição. Para atualizá-lo, 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+REST e E-mail como Motores de Processos em RPA
+ 
+envia PUT /produtos/42 e, para excluí-lo, usa DELETE /produtos/42. Essa lógica, por 
+si só, já representa uma revolução: o cliente interage com conceitos claros e 
+previsíveis, sem precisar conhecer os detalhes do banco de dados, da linguagem de 
+backend ou da lógica de autenticação da aplicação. 
+A uniformidade dessa interfa ce é intencional: ela simplifica o consumo, 
+padroniza o comportamento e facilita a descoberta de novos endpoints. Do ponto de 
+vista técnico, uma API REST bem projetada se comporta de maneira idempotente 
+(especialmente nas requisições GET, PUT, DELETE), res peita códigos de status 
+HTTP (como 200 OK, 404 Not Found, 400 Bad Request) e documenta claramente 
+suas expectativas quanto ao conteúdo, formato e permissões. 
+Outro aspecto fundamental do REST é a separação entre cliente e servidor. O 
+consumidor não precisa conhecer o estado interno da aplicação servidora, suas regras 
+de negócio ou suas estruturas de dados — ele apenas manipula representações de 
+recursos. Essa separação permite que o cliente  e o servidor  evoluam de forma 
+independente. Em tempos de microsserv iços e aplicações desacopladas, essa 
+propriedade é especialmente valiosa, pois garante escalabilidade organizacional e 
+tecnológica. 
+O REST não é uma tecnologia ou protocolo, mas sim um conjunto de restrições 
+arquiteturais. A API que as adota pode ser imple mentada em qualquer linguagem, 
+desde que respeite a semântica dos métodos HTTP, trate URIs como identificadores 
+de recursos e ofereça representações que possam ser manipuladas pelo cliente. O 
+consumidor, por sua vez, não precisa conhecer o REST profundamente. Basta que 
+saiba identificar os endpoints, compreender os métodos HTTP e interpretar as 
+respostas JSON. Esse é o foco do próximo tópico. 
+2.2 O Protocolo HTTP 
+2.2.1 A origem e evolução do protocolo HTTP: motivações e primeiros usos 
+O protocolo HTTP const
+
+===== 2TIAOA - Fase 3 - Cap03 - Cérebros de Silício na Era dos Chips Neuromórficos_RevFinal.pdf =====
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+  
+CÉREBROS DE
+SILÍCIO NA ERA
+DOS CHIPS
+NEUROMÓRFICOS
+03
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+LISTA DE FIGURAS 
+Figura 1 - Comparação de rede neural bipartida (esquerda) e lógica de um núcleo 
+TrueNorth (direita) ..................................................................................................... 6 
+Figura 2 - Cantos de dois chips TrueNorth, com trajetórias de spikes dentro do chip e 
+entre chips ................................................................................................................. 7 
+Figura 3 - Handshake assíncrono de quatro fases .................................................... 8 
+Figura 4 - Chip TrueNorth (esquerda) com malha 2D de 64×64 núcleos 
+neurossinápticos; na borda (centro), interface com bloco mesclador-divisor e pads de 
+I/O; à direita, sobreposição do layout físico e diagrama funcional de um núcleo ...... 9 
+Figura 5 - Diagrama de blocos da arquitetura interna do chip Loihi 2 ....................... 14 
+Figura 6 - Comparativo entre o Loihi e o Loihi 2 em termos de desempenho e 
+recursos..................................................................................................................... 16 
+Figura 7 - Hala Point ................................................................................................. 19 
+Figura 8 - Espectro Eletromagnético ......................................................................... 23 
+Figura 9 - Tendências de publicações e citações em fotônica .................................. 29 
+Figura 10 - Estrutura de uma fibra ótica .................................................................... 33 
+Figura 11 - Fenômeno de reflexão total .................................................................... 36 
+Figura 12 - Comparação entre (a) sensores extrínsecos e (b) sensores intrínsecos 39 
+Figura 13 - Estrutura da topologia das redes SNN e ANN ........................................ 43 
+Figura 14 - Consumo de corrente dos microcontroladores ATMEGA328 e Tensilica 
+Xtensa LX106 ............................................................................................................ 45 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+LISTA DE QUADROS 
+Quadro 1 - Comparação entre chips neuromórficos TrueNorth e Loihi ..................... 21 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+SUMÁRIO 
+ 
+1 CÉREBROS DE SILÍCIO NA ERA DOS CHIPS NEUROMÓRFICOS ................... 5 
+1.1 Introdução ........................................................................................................... 5 
+1.2 IBM TrueNorth ..................................................................................................... 5 
+1.3 Intel Loihi ............................................................................................................. 12 
+2 INTRODUÇÃO À FOTÔNICA: O QUE É E COMO FUNCIONA ............................ 22 
+2.1 Fundamentos da fotônica .................................................................................... 22 
+2.2 Aplicações da fotônica......................................................................................... 26 
+2.3 Avanços na fotônica ............................................................................................ 28 
+2.4 Estruturas, tipos e aplicações de fibras óticas ..................................................... 31 
+2.5 Classificação de sensores de fibra ótica ............................................................. 37 
+3 EFICIÊNCIA ENERGÉTICA EM IOT – COMPARAÇÃO ENTRE ALGORITMOS 
+SNN E ANN EM ARQUITETURAS VON NEUMANN ................................................ 40 
+3.1 O contexto energético da IoT e o desafio computacional .................................... 41 
+3.2 Metodologia experimental e comparação arquitetural ......................................... 42 
+3.3 Resultados obtidos e análise crítica .................................................................... 44 
+REFERÊNCIAS ......................................................................................................... 49 
+ 
+ 
+  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+1 CÉREBROS DE SILÍCIO NA ERA DOS CHIPS NEUROMÓRFICOS 
+1.1 Introdução 
+O avanço das arquiteturas neuromórficas viabilizou o desenvolvimento de chips 
+especializados que integram processamento e memória em estruturas paralelas, 
+inspiradas no cérebro humano. Est e capítulo apresenta as principais tecnologias de 
+chips neuromórficos disponíveis atualmente, com foco nos modelos IBM TrueNorth e 
+Intel Loihi, ambos projetados para simular redes neurais spiking (SNN) com alta 
+eficiência energética. 
+O IBM TrueNorth  se destaca por sua arquitetura baseada em milhões de 
+neurônios e sinapses digitais, organizados em núcleos neuro  sinápticos que operam 
+de forma assíncrona e altamente paralela. Essa estrutura permite executar tarefas 
+cognitivas complexas com consumo mínimo de energia, sendo ideal para aplicações 
+que exigem reconhecimento de padrões e processamento de sinais em tempo real. 
+Já o Intel Loihi introduz avanços significativos ao incorporar mecanismos de 
+aprendizado on-chip e plasticidade sináptica em tempo real. Sua arquitetura orientada 
+por eventos (event-driven) faz com que os neurônios só entrem em atividade quando 
+necessário, otimizando ainda mais o consumo energético. O Loihi oferece um 
+ambiente flexível para o desenvolvimento e teste de algoritmos neuromórficos, sendo 
+especialmente indicado para aplicações embarcadas e sistemas autônomos. 
+Ao longo do capítulo, discutiremos essas tecnologias em maior profundidade, 
+destacando suas características estruturais, capacidades computacionais e potencial 
+de aplicação  em sistemas que demandam processamento eficiente e de baixo 
+consumo energético. 
+1.2 IBM TrueNorth 
+A arquitetura TrueNorth, desenvolvida pela IBM em parceria com a DARPA no 
+contexto do projeto SyNAPSE, representa uma ruptura com os modelos tradicionais 
+baseados na arquitetura de von Neumann. Em vez de separar memória e 
+processamento, o TrueNorth adota uma estrutura inspirada na organização do 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+cérebro, com núcleos que integram ambos em uma mesma unidade funcional. A 
+proposta é aproximar o comportamento computacional ao de redes neurais biológicas, 
+buscando uma maior eficiência energética e paralelismo. 
+A base do TrueNorth são o s chamados núcleos neurossinápticos, elementos 
+que unem memória (sinapses), computação (neurônios) e comunicação 
+(axônios/dendritos). A arquitetura completa é composta por 4.096 núcleos dispostos 
+em uma malha 2D de 64  x 64, totalizando 1 milhão de neurônio s e 256 milhões de 
+sinapses. Essa organização é inspirada diretamente na estrutura das colunas corticais 
+do cérebro humano. 
+Cada núcleo neuro sináptico contém 256 axônios de entrada e 256 neurônios, 
+conectados por uma matriz sináptica de 64 mil conexões. Essa estrutura é visualizada 
+na figura “Comparação de rede neural bipartida (esquerda) e lógica de um núcleo 
+TrueNorth (direita)”, que mostra o mapeamento entre uma rede neural bipartida e o 
+núcleo físico.  
+ 
+Figura 1 - Comparação de rede neural bipartida (esquerda) e lógica de um núcleo TrueNorth (direita) 
+Fonte: Yadav et al. (2023), adaptado pelo autor (2025) 
+A computação ocorre em ciclos de 1 milissegundo (tick), com atualização dos 
+estados neurais sincronizada por eventos, o que permite operação em tempo real com 
+baixo consumo energético. 
+Os spikes — pulsos binários que representam os disparos neuronais  — são 
+armazenados em buffers de entrada e, quando o tick é acionado, são roteados para 
+os neurônios correspondentes por meio da matriz sináptica. A atualização do potencial 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+de membrana, com aplicação de vazamento (leak), comparação com limiar e eventual 
+disparo, segue regras simples implementadas diretamente em hardware. 
+A equação básica u tilizada para o cálculo do po tencial será apresentada no 
+terceiro tópico deste capítulo. O fato de o modelo evitar multiplicações e divisões ajuda 
+a reduzir o consumo energético e a simplificar o design lógico, tornando o chip viável 
+para implementação em silício com área reduzida. 
+A comunicação entre os núcleos utiliza um sistema em malha chamado rede -
+mesh, que permite a propagação dos spikes de forma assíncrona e eficiente. A figura 
+“Cantos de dois chips TrueNorth, com trajetórias de spikes dentro do chip e entre 
+chips” ilustra esse processo, incluindo trajetórias de pacotes tanto dentro do mesmo 
+chip quanto entre chips diferentes. Para viabilizar a escalabilidade além de um único 
+chip, foram desenvolvidos circuitos periféricos que realizam a multiplexação e 
+demultiplexação dos dados — possibilitando a construção de sistemas multichip, onde 
+diversos chips TrueNorth são interligados para tarefas mais complexas. 
+ 
+Figura 2 - Cantos de dois chips TrueNorth, com trajetórias de spikes dentro do chip e entre chips 
+Fonte: Akopyan et al. (2015), adaptado pelo autor (2025) 
+Internamente, a lógica de controle e comunicação é implementada com 
+circuitos assíncronos, enquanto o processamento dos neurônios usa lógica síncrona. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+Essa abordagem híbrida permite o uso eficiente de energia, pois evita clocks globais 
+e reduz o consumo quando o chip está inativo. 
+Esse design assíncrono é esquematizado na figura “Handshake assíncrono de 
+quatro fases ”, que ilustra o protocolo de handshake de quatro fases utilizado para 
+sincronizar a transferência de dados entre blocos. Nela, o bloco “Enviar” transmite 
+sinais binários (“dados 0” ou “dados 1”) ao bloco “Receber” e aguarda o sinal de 
+confirmação (“conf”) antes de seguir para o próximo bit. O diagrama de tempo à direita 
+ilustra como, ao enviar “0” ou “1”, o receptor primeiro detecta a transição de dados e 
+então retorna o “conf”, garantindo que ambos os lados estejam sincronizados antes 
+de prosseguir. 
+ 
+Figura 3 - Handshake assíncrono de quatro fases 
+Fonte: Akopyan et al. (2015), adaptado pelo autor (2025) 
+A estrutura física do chip é apresentada na figura “Chip TrueNorth (esquerda) 
+com malha 2D de 64 x 64 núcleos neurossinápticos; na borda (centro), interface com 
+bloco mesclador -divisor e pads de I/O; à direita, sobreposição do layout físico e 
+diagrama funcional de um núcleo ”, e revela três níveis de organização espacial 
+distintos que ajudam a entender como o TrueNorth é capaz de integrar alta densidade 
+computacional com eficiência energética. 
+Na parte (esquerda), é possível observar a malha bidimensional (2D) de 64  x 
+64 núcleos neurossinápticos que compõem o TrueNorth. Essa malha cobre quase 
+toda a área central do chip e representa o núcleo de processamento do sistema, 
+simulando 1 milhão de neurônios. Cada núcleo individual ocupa uma pequena região 
+do silício, otimizando o espaço sem comprometer a conectividade. 
+A parte (centro) mostra a periferia do chip, onde ficam os bl ocos de interface 
+conhecidos como "mesclador-divisor" (merge-split) e os pads de entrada/saída (I/O). 
+Esses elementos desempenham um papel crucial no agrupamento e roteamento dos 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+dados, conectando os núcleos internos com o ambiente externo ou com outros ch ips 
+em arquiteturas maiores. 
+Por fim, a parte ( direita) fornece uma visão ampliada de um único núcleo 
+neurossináptico. Nessa representação, os blocos funcionais são sobrepostos ao 
+layout físico real, revelando a localização e o papel de cada componente: o roteador, 
+responsável pelo tráfego de spikes; o agendador, scheduler que organiza os eventos 
+temporais; o controlador de tokens, que ativa os neurônios em sequência; a memória 
+SRAM, que armazena parâmetros e estados neurais; e, por fim, o bloco de neurônio, 
+que realiza a computação propriamente dita. 
+ 
+Figura 4 - Chip TrueNorth (esquerda) com malha 2D de 64×64 núcleos neurossinápticos; na borda 
+(centro), interface com bloco mesclador-divisor e pads de I/O; à direita, sobreposição do layout físico 
+e diagrama funcional de um núcleo 
+Fonte: Akopyan et al. (2015), adaptado pelo autor (2025) 
+O bloco de neurônio do TrueNorth é responsável por realizar os cálculos 
+centrais de cada unidade neural, seguindo o  modelo de integração e disparo. Ele 
+acumula os sinais de entrada recebidos de diferentes axônios e os  compara com um 
+limiar. Se esse limiar for superado, um spike é gerado  e o estado do neurônio é 
+redefinido. Esse mecanismo permite a simulação eficiente d e múltiplos padrões de 
+disparo, inclusive aqueles observados em sistemas biológicos. 
+Cada núcleo conta com um circuito único que é multiplexado para simular até 
+256 neurônios. Isso significa que o mesmo circuito realiza a operação de todos os 
+neurônios do núcleo, um por vez, o que reduz significativamente a área ocupada e o 
+consumo energético. Embora essa abordagem sacrifique parte da simultaneidade na 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cérebros de Silício na Era dos Chips Neuromórficos
+ 
+simulação, ela se mostra adequada para aplicações em tempo real, uma vez que o 
+ciclo de operação é sincronizado com o
+
+===== 2TIAOA - Fase 3 - Cap08 - Cloud Computing como Pilar da IoT Moderna_RevFinal.pdf =====
+Cloud Computing como Pilar da IoT Moderna
+   
+ 
+   
+ 
+ 
+  
+CLOUD COMPUTING
+COMO PILAR DA
+IOT MODERNA
+08
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+ 
+   
+ 
+LISTA DE FIGURAS 
+Figura 1 - Arquitetura distribuída em sistemas ciberfísicos com camadas de borda, 
+névoa e nuvem .......................................................................................................... 10 
+Figura 2 - Arquitetura de computação em nuvem com camadas de infraestrutura, 
+plataforma e aplicação em IoT .................................................................................. 17 
+Figura 3 - Arquitetura da experiência de computação em nuvem com ESP32 e 
+plataformas integradas .............................................................................................. 18 
+Figura 4 - Diagrama de conexão entre ESP32 DevKit V4 e MPU6050 via I²C .......... 20 
+Figura 5 - Tela inicial do HiveMQ Cloud com cluster gratuito configurado ................ 24 
+Figura 6 - Definição de credenciais MQTT no painel de gerenciamento do HiveMQ 
+Cloud ......................................................................................................................... 25 
+Figura 7 - Configuração do nó MQTT de entrada no Node-RED para conexão com 
+HiveMQ Cloud ........................................................................................................... 26 
+Figura 8 - Configuração dos nós MQTT no Node-RED: tópico e servidor ................. 27 
+Figura 9 - Configuração do nó HTTP para envio dos dados à InfluxDB .................... 28 
+Figura 10 - Bucket “Cloud-Computing” criado no InfluxDB Cloud ............................. 29 
+Figura 11 - Consulta dos dados no Data Explorer do InfluxDB Cloud ....................... 30 
+Figura 12 - Configuração da fonte de dados InfluxDB no Grafana Cloud ................. 31 
+Figura 13 - Visualização dos dados de aceleração em tempo real no Grafana Cloud
+ .................................................................................................................................. 32 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+   
+ 
+   
+ 
+LISTA DE QUADROS 
+Quadro 1 - Vantagens e desvantagens da computação em nuvem .......................... 12 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+ 
+   
+ 
+LISTA DE CÓDIGOS-FONTE 
+Código-fonte 1 - Inclusão de bibliotecas e definição de parâmetros ......................... 21 
+Código-fonte 2 - Conexão à nuvem e inicialização de sensores ............................... 22 
+Código-fonte 3 - Leitura dos dados do MPU6050 ..................................................... 23 
+Código-fonte 4 - Formatação e envio dos dados para a nuvem ................................ 23 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+   
+ 
+   
+ 
+SUMÁRIO 
+1 CLOUD COMPUTING COMO PILAR DA IOT MODERNA .................................... 6 
+1.1 Fundamentos da computação distribuída em IoT ............................................... 6 
+1.2 Conceito de Cloud, Fog e Edge Computing ........................................................ 7 
+1.3 Arquiteturas distribuídas em sistemas ciberfísicos .............................................. 9 
+1.4 Vantagens e desvantagens da computação em nuvem ...................................... 11 
+1.4.1 Casos de uso típicos em IoT ............................................................................ 13 
+2 CLOUD COMPUTING COM ESP32 E GRAFANA CLOUD ................................... 15 
+2.1 Fundamentos da computação em nuvem aplicada à IoT .................................... 15 
+2.2 Experiência prática com ESP32 e visualização em nuvem ................................. 17 
+2.2.1 Hardware – ESP32 e MPU6050 ....................................................................... 18 
+2.2.2 Transmissão MQTT – Broker HiveMQ Cloud ................................................... 23 
+2.2.3 Processamento e encaminhamento – Node-RED ............................................ 25 
+2.2.4 Armazenamento de dados – InfluxDB Cloud .................................................... 28 
+2.2.5 Visualização e dashboards – Grafana Cloud ................................................... 30 
+3 COMPARAÇÃO ENTRE NUVEM, NÉVOA E BORDA ........................................... 33 
+3.1 Potencial da computação em nuvem .................................................................. 33 
+3.2 Quais são as limitações e desafios da computação em nuvem? ........................ 35 
+3.3 Estratégias para maximizar o uso da nuvem ....................................................... 36 
+REFERÊNCIAS ......................................................................................................... 38 
+ 
+  
+  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+ 
+   
+ 
+1 CLOUD COMPUTING COMO PILAR DA IOT MODERNA 
+1.1 Fundamentos da computação distribuída em IoT 
+O avanço da Internet das Coisas (IoT) tem promovido mudanças significativas 
+nas formas tradicionais de processamento e gerenciamento de dados. Diferentemente 
+dos sistemas centralizados, onde todos os  dados são transmitidos para um único 
+ponto de processamento, a IoT demanda arquiteturas distribuídas capazes de lidar 
+com grandes volumes de informações, operar com latências reduzidas e manter um 
+desempenho consistente mesmo em cenários de conectividade instável. Nesse 
+contexto, a computação distribuída em IoT se consolida como uma estratégia 
+essencial, permitindo que o processamento ocorra em diferentes pontos da rede, com 
+variados níveis de autonomia e capacidade computacional. 
+A diversidade dos disposi tivos utilizados em soluções IoT, que podem incluir 
+sensores básicos, microcontroladores, gateways, servidores locais e plataformas em 
+nuvem, exige modelos escaláveis e flexíveis. Nos últimos anos, essa diversidade 
+impulsionou o surgimento de arquiteturas com múltiplas camadas de processamento, 
+cada uma desempenhando um papel específico no ciclo de vida dos dados. Essa 
+descentralização da lógica computacional possibilita respostas mais rápidas a eventos 
+críticos, aumenta a resiliência em ambientes sujeitos a falhas e promove uma gestão 
+mais eficiente do consumo energético. 
+De forma geral, a computação distribuída em IoT é organizada em três níveis 
+principais: borda (edge), névoa (fog) e nuvem (cloud). Essa divisão representa não 
+apenas a localização física onde o processamento ocorre, mas também a 
+complexidade das tarefas atribuídas a cada nível. A borda executa operações 
+imediatas, como a leitura e a filtragem de dados de sensores. A névoa — posicionada 
+entre a borda e a nuvem  — possibilita análises locais mais avançadas, incluindo 
+detecção de padrões e agregações de dados. Por último, a  nuvem concentra o 
+armazenamento histórico, a análise de grandes volumes de informações, a 
+visualização de m étricas complexas e a integração com recursos como Inteligência 
+Artificial, Aprendizado de Máquina e Bancos de Dados Especializados. 
+Essa hierarquia torna possível responder a eventos de maneira eficiente e 
+otimizada. Em um sistema de monitoramento sísmico , por exemplo, a borda poderia 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+ 
+   
+ 
+detectar anomalias no sinal de um acelerômetro, a névoa consolidaria dados de 
+sensores de uma região e acionaria alertas locais, enquanto a nuvem armazenaria o 
+histórico para análises detalhadas e cruzamento com variáveis amb ientais. Dessa 
+forma, cada camada cumpre uma função específica e complementar. 
+A adaptabilidade também é um fator relevante. Em ambientes urbanos com 
+conectividade estável, a nuvem pode desempenhar o papel central no sistema, 
+recebendo e processando dados de forma contínua. Já em áreas remotas ou com 
+infraestrutura limitada, é fundamental que decisões sejam tomadas localmente, 
+ampliando a importância da borda e da névoa para garantir autonomia e continuidade 
+operacional. Essa versatilidade torna a computaçã o distribuída uma escolha 
+estratégica em setores como agricultura de precisão, saúde conectada, cidades 
+inteligentes e processos industriais com requisitos de tempo real. 
+No entanto, a  adoção dessa abordagem  traz alguns desafios como a 
+necessidade de sincr onização entre diferentes camadas, a proteção dos dados em 
+múltiplos pontos da rede e a otimização do firmware embarcado. O projetista de 
+soluções IoT deve estar preparado para avaliar não apenas as tecnologias 
+disponíveis, mas também as condições operacionais do ambiente, equilibrando custo, 
+desempenho e segurança. 
+Compreender essa estrutura distribuída é o ponto de partida para entender o 
+papel da computação em nuvem, que se destaca como elemento central em muitas 
+arquiteturas IoT modernas. Na próxima seç ão, serão apresentados os conceitos 
+fundamentais dessa abordagem, explorando suas características, possibilidades e o 
+potencial que oferece para aplicações conectadas em larga escala. 
+1.2 Conceito de Cloud, Fog e Edge Computing 
+Compreender os conceitos de cloud computing, fog computing e edge 
+computing é fundamental para projetar arquiteturas eficientes e escaláveis em 
+sistemas de  IoT. Essas três abordagens representam diferentes pontos de 
+processamento dos dados, cada uma com características próprias quanto à latência, 
+capacidade de processamento, consumo energético, segurança e complexidade de 
+implementação. A escolha da estratégia mais adequada depende diretamente dos 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+ 
+   
+ 
+requisitos da aplicação, da infraestrutura disponível e do nível de autonomia esperado 
+para os dispositivos no ambiente de operação. 
+A computação em nuvem é caracterizada pelo processamento e 
+armazenamento de dados em servidores remotos, normalmente distribuídos 
+geograficamente e acessados por meio da internet. Nessa abordagem, os dispositivos 
+IoT atuam como coletores de dados, enviando as informações para a nuvem, onde 
+ocorre o processamento centralizado, a análise estatística, a criação de dashboards 
+e a aplicação de algoritmos avançados de Inteligência Artificial. As plataformas em 
+nuvem oferecem recursos praticamente ilimitados de escalabilidade, além de 
+integração com APIs e serviços de terceiros. Essa capacidade a torna ideal para 
+cenários que exigem armazenamento de longo prazo, cruzamento de dados de 
+múltiplas fontes e análises complexas. No entanto, o uso da nuvem implica em maior 
+dependência de conectividade estável, latência mais elevada e necessidade de 
+medidas adicionais para proteção de dados sensíveis. 
+A computação em névoa atua como camada intermediária entre os dispositivos 
+de borda e a nuvem. Nesse modelo, o processamento é realizado em equipamentos 
+locais, como gateways, roteadores inteligentes, computadores embarcados ou 
+servidores próximos ao ambiente de coleta. A névoa possibilita respostas mais rápidas 
+ao reduzir a distância que os dados percorrem até serem analisados, além de diminuir 
+o tráfego de rede e aliviar a carga sobre os servidores em nuvem. Essa abordagem é 
+indicada para ambientes industriais, agrícolas e urbanos em que decisões 
+automatizadas precisam ser tomadas com agilidade e, ao mesmo tempo, mantendo a 
+integração com sistemas de maior capacidade de processamento e armazenamento. 
+Embora distintas, essas abordagens podem ser combinadas para formar 
+arquiteturas híbridas, aproveitando os pontos fortes de cada nível. Em soluções 
+modernas de IoT, é comum que a borda execute decisões rápidas, a névoa consolide 
+informações e a nuvem concentre análises e armazenamento de longo prazo. No 
+contexto deste capítulo, o foco será aprofundar o papel da  computação em nuvem e 
+demonstrar como sua aplicação pode potencializar projetos com microcontroladores 
+ESP32 e sensores embarcados. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+ 
+   
+ 
+1.3 Arquiteturas distribuídas em sistemas ciberfísicos 
+Os sistemas ciberfísicos representam a integração entre o mundo físi co e o 
+digital, combinando sensores, atuadores, microcontroladores, redes de comunicação 
+e plataformas computacionais em uma estrutura capaz de perceber, processar e 
+reagir ao ambiente de forma inteligente. Em soluções baseadas em Internet das 
+Coisas, o desenho da arquitetura distribuída é essencial para garantir escalabilidade, 
+eficiência energética, confiabilidade e autonomia nas respostas aos eventos do mundo 
+real. 
+A arquitetura distribuída desses sistemas baseia -se no princípio de 
+descentralizar o proce ssamento, a coleta e a tomada de decisão. Em vez de 
+concentrar toda a inteligência em um único ponto — como em um servidor central —, 
+as responsabilidades são distribuídas por diferentes camadas e dispositivos. Isso 
+permite uma resposta mais rápida e resil iente a variações ambientais, ao mesmo 
+tempo em que possibilita que cada camada opere de acordo com suas capacidades. 
+A próxima figura apresenta um modelo clássico de arquitetura distribuída em 
+IoT, destacando os níveis de sensoriamento, comunicação, pré -processamento, 
+análise e visualização, com a clara divisão das funções entre as camadas de borda, 
+névoa e nuvem. Essa organização hierárquica facilita a compreensão do papel de 
+cada nível e reforça a importância da coordenação entre eles. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Cloud Computing como Pilar da IoT Moderna
+ 
+   
+ 
+ 
+Figura 1 - Arquitetura distrib
+
+===== 2TIAOA - Fase 3 - Cap09 - Inteligência na Borda Fog e Edge Computing Transformando a IoT_RevFinal.pdf =====
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+   
+ 
+   
+ 
+ 
+  
+INTELIGÊNCIA
+NA BORDA: FOG E
+EDGE COMPUTING
+TRANSFORMANDO A
+IOT
+09
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+ 
+   
+ 
+LISTA DE FIGURAS 
+Figura 1 - Representação das camadas de processamento em uma arquitetura IoT 
+com Cloud, Fog e Edge Computing .......................................................................... 8 
+Figura 2 - Arquitetura conceitual da computação em névoa (fog computing) aplicada 
+à IoT .......................................................................................................................... 12 
+Figura 3 - Arquitetura da experiência de Fog Computing .......................................... 13 
+Figura 4 - Ligação entre ESP32 DevKit V4 e sensor MPU6050 via I²C .................... 15 
+Figura 5 - Fluxo de processamento local no Node-RED ........................................... 18 
+Figura 6 - Configuração do nó MQTT de entrada no Node-RED .............................. 19 
+Figura 7 - Indicador visual de movimento no dashboard do Node-RED .................... 20 
+Figura 8 - Fluxo no Node-RED para visualização mínima dos eventos de movimento
+ .................................................................................................................................. 28 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+   
+ 
+   
+ 
+LISTA DE QUADROS 
+Quadro 1 - Conexões entre ESP32 e MPU6050 com uso do pino de interrupção .... 24 
+Quadro 2 - Comparação objetiva entre Cloud, Fog e Edge Computing .................... 33 
+Quadro 3 - Comparativo técnico entre Cloud, Fog e Edge Computing nos aspectos 
+de consumo de energia, latência e robustez ............................................................. 35 
+Quadro 4 - Critérios de seleção e recomendação de abordagem predominante ...... 37 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+   
+ 
+   
+ 
+LISTA DE CÓDIGOS-FONTE 
+Código-fonte 1 - Verificação do serviço Mosquitto no Windows ................................ 16 
+Código-fonte 2 - Instalação do Mosquitto e clientes no Linux (Ubuntu/Debian) ........ 16 
+Código-fonte 3 - Execução do Mosquitto via Docker ................................................. 16 
+Código-fonte 4 - Configuração da conexão MQTT com o broker Mosquitto local ..... 17 
+Código-fonte 5 - Inicialização do sensor MPU6050 com interrupção configurada .... 25 
+Código-fonte 6 - Função de interrupção para tratamento do evento ......................... 26 
+Código-fonte 7 - Loop principal com lógica de decisão ............................................. 26 
+Código-fonte 8 - Publicação MQTT somente após evento de aceleração ................ 27 
+ 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+   
+ 
+   
+ 
+SUMÁRIO 
+1 INTELIGÊNCIA NA BORDA: FOG E EDGE COMPUTING TRANSFORMANDO A 
+IOT ............................................................................................................................ 6 
+1.1 Computação distribuída em IoT: Conceito, papel e características ..................... 6 
+1.2 Visão geral das arquiteturas descentralizadas na IoT ......................................... 7 
+1.2.1 Centralização vs. processamento local: diferenças práticas ............................ 9 
+1.2.2 Vantagens e limitações das abordagens distribuídas ...................................... 10 
+2 FOG COMPUTING ................................................................................................. 11 
+2.1 Fundamentos da computação em névoa para sistemas IoT ............................... 11 
+2.2 Experiência prática .............................................................................................. 13 
+2.2.1 Hardware – ESP32 e MPU6050 ....................................................................... 14 
+2.2.2 Transmissão MQTT – Mosquitto Broker Local ................................................. 16 
+2.2.3 Processamento e lógica local – Node-RED ...................................................... 17 
+2.2.4 Visualização – Dashboard interativo no Node-RED ......................................... 19 
+3 EDGE COMPUTING .............................................................................................. 21 
+3.1 Fundamentos da inteligência na borda e microcontroladores inteligentes .......... 21 
+3.2 Experiência prática .............................................................................................. 22 
+3.2.1 Hardware – ESP32 e MPU6050 com interrupção no pino INT ......................... 23 
+3.2.2 Processamento embarcado – Filtragem e tomada de decisão no firmware ..... 24 
+3.2.3 Comunicação eficiente – Envio apenas de eventos relevantes via MQTT ....... 27 
+3.2.4 Visualização – Interface mínima com Node-RED ............................................. 28 
+4 COMPARAÇÃO ENTRE NUVEM, NÉVOA E BORDA ........................................... 30 
+4.1 Matriz comparativa detalhada ............................................................................. 31 
+4.2 Análise de consumo de energia, latência e robustez .......................................... 33 
+4.3 Critérios para escolha da abordagem ideal ......................................................... 35 
+REFERÊNCIA ........................................................................................................... 38 
+ 
+  
+  
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+ 
+   
+ 
+1 INTELIGÊNCIA NA BORDA: FOG E EDGE COMPUTING 
+TRANSFORMANDO A IOT 
+1.1 Computação distribuída em IoT: Conceito, papel e características 
+A computação distribuída em Internet das Coisas (IoT) é um paradigma no qual 
+o processamento, o armazenamento e a análise de dados são realizados de forma 
+descentralizada, aproveitando recursos distribuídos entre dispositivos de borda, nós 
+intermediários e a nuvem. Diferente de um modelo estritamente centralizado, no qual 
+todos os dados precisam ser enviados a um data center remoto para processamento, 
+a computação distribuída permite que parte significativa desse trabalho ocorra mais 
+próximo da fonte de geração de dados. 
+Em um ambiente IoT, sensores, atuadores e controladores estão 
+frequentemente espalhados por grandes áreas geográficas, coletando dados em 
+tempo real sobre variáveis físicas, químicas ou ambientais. A transmissão de todos 
+esses dados brutos para a nuvem pode acarretar problemas de latência, consumo de 
+largura de banda e até riscos de indisponibilidade em situações críticas. A computação 
+distribuída surge como resposta a esses desafios, permitindo um balanceamento 
+inteligente entre o processamento local e remoto. 
+Além de reduzir a sobrecarga na infraestrutura de rede, esse modelo possibilita 
+respostas mais rápidas, uma vez que  as decisões críticas podem ser tomadas 
+diretamente na borda ou em níveis intermediários, sem depender exclusivamente da 
+conectividade com a nuvem. Em aplicações como veículos autônomos, sistemas 
+industriais e monitoramento de saúde, essa característica é fundamental para garantir 
+segurança, confiabilidade e continuidade operacional. 
+Do ponto de vista arquitetural, a computação distribuí da na IoT se apoia em 
+três camadas principais: 
+• Borda (Edge Computing):  nível mais próximo do dispositivo ou sensor, 
+responsável por processar dados localmente e enviar apenas informações 
+relevantes ou eventos detectados. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+ 
+   
+ 
+• Névoa (Fog Computing):  camada inter mediária que conecta a borda à 
+nuvem, atuando como ponto de processamento regional, filtragem de dados 
+e integração com sistemas locais. 
+• Nuvem (Cloud Computing):  camada centralizada que oferece grande 
+capacidade de armazenamento e processamento para análises avançadas 
+e integração com serviços de alto nível. 
+Essa divisão hierárquica não é rígida, e a alocação das funções de cada 
+camada depende das características do sistema, dos requisitos de desempenho e da 
+disponibilidade de recursos. Em projetos reais, a  definição da estratégia de 
+computação distribuída é determinante para atingir equilíbrio entre desempenho, 
+custo e robustez, tornando-se uma etapa essencial no planejamento de soluções IoT. 
+Compreender o papel dessas arquiteturas descentralizadas e como e las se 
+complementam é o próximo passo para projetar sistemas de IoT eficientes. Na seção 
+a seguir, veremos uma visão geral das arquiteturas descentralizadas, explorando seus 
+elementos, interações e relevância para diferentes cenários de aplicação. 
+1.2 Visão geral das arquiteturas descentralizadas na IoT 
+A computação distribuída em IoT refere -se à organização de sistemas nos 
+quais o processamento, o armazenamento e a tomada de decisão não estão 
+concentrados em um único ponto, mas distribuídos entre múltiplos  dispositivos e 
+camadas da arquitetura. Essa abordagem surgiu como resposta à crescente demanda 
+por aplicações mais rápidas, escaláveis e resilientes, capazes de lidar com o grande 
+volume de dados gerado por sensores, atuadores e outros dispositivos conectados. 
+Em vez de transmitir todas as informações brutas diretamente para um servidor 
+central, parte do processamento é executada mais próxima da origem dos dados, o 
+que reduz a latência, diminui o consumo de banda e aumenta a autonomia do sistema. 
+O papel da computação distribuída é fundamental para viabilizar aplicações críticas, 
+como sistemas de monitoramento industrial, veículos autônomos e redes inteligentes 
+de energia, onde a velocidade de resposta e a confiabilidade são determinantes. 
+A figura a seguir  ilustra a relação entre as três camadas mais comuns nesse 
+contexto: a borda (edge), a névoa (fog) e a nuvem (cloud). Na camada inferior, 
+encontram-se os dispositivos de borda e seus microcontroladores, responsáveis pelo 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+ 
+   
+ 
+processamento local imediato. No nível intermediário, a camada de névoa agrega, 
+filtra e pré -processa os dados recebidos da borda. Na camada su perior, a nuvem 
+realiza análises históricas, armazena grandes volumes de dados e integra 
+informações com serviços e plataformas externas. 
+ 
+Figura 1 - Representação das camadas de processamento em uma arquitetura IoT com Cloud, Fog e  
+Edge Computing 
+Fonte: Oliveira (2019), adaptado por FIAP (2025) 
+As principais características dessa abordagem incluem a escalabilidade 
+horizontal, que permite a adição de novos nós conforme a demanda aumenta; a 
+resiliência a falhas, garantindo continuidade mesmo em condições adversas; e a 
+flexibilidade na integração de diferentes tecnologias e protocolos. No entanto, também 
+há desafios a serem superados, como a complexidade na coordenação entre múltiplos 
+nós, a necessidade de mecanismos de segur ança distribuídos e a padronização das 
+interfaces de comunicação. 
+Essa base conceitual serve como ponto de partida para compreender como 
+diferentes paradigmas de processamento descentralizado são aplicados na prática. 
+Nas próximas subseções, será explorado  com mais detalhes o papel específico 
+dessas arquiteturas e como elas influenciam o desempenho, a segurança e a 
+eficiência dos sistemas conectados. 
+PDF exclusivo para Marco Aurélio Eberhardt Assumpção - rm563348
+marcoaeassumpcao@gmail.com
+Inteligência na Borda: Fog e Edge Computing Transformando a IoT
+ 
+   
+ 
+1.2.1 Centralização vs. processamento local: diferenças práticas 
+A partir da representação da  figura “Representação das camadas de 
+processamento em uma arquitetura IoT com Cloud, Fog e Edge Computing” , é 
+possível compreender que a principal distinção entre uma arquitetura centralizada e 
+uma distribuída está no local onde ocorre o processamento e a tomada de deci são. 
+Na abordagem centralizada, todos os dados coletados pelos dispositivos são enviados 
+integralmente para um servidor remoto, normalmente na nuvem, onde são 
+processados e analisados. Essa estratégia simplifica a gestão e o controle, pois as 
+regras de negócio, a lógica de análise e o armazenamento estão concentrados em um 
+único ponto. 
+Entretanto, essa centralização gera impactos diretos na performance e na 
+resiliência do sistema. Como todo o tráfego precisa percorrer o caminho até a nuvem 
+e retornar, há ma ior latência na resposta e maior dependência de conectividade 
+estável. Em cenários críticos — como monitoramento de equipamentos industriais ou 
+detecção de incidentes de segurança  —, esses milissegundos adicionais podem 
+representar risco à operação. 
+No modelo com processamento local, característico de arquiteturas de borda e 
+névoa, parte da análise é realizada próxima à origem dos dados. Isso permite que 
+decisões imediatas sejam tomadas sem a necessidade de aguardar a resposta de um 
+servidor distante. Por e xemplo, um sensor de vibração em uma máquina industrial 
+pode acionar um alarme local ao detectar padrões que indiquem falha iminente, 
+enquanto envia dados agregados para análise histórica na nuvem. 
+A escolha entre centralização e processamento local não é obrigatoriamente 
+exclusiva. Muitos sistemas adotam modelos híbridos, nos quais tarefas críticas são 
+tratadas localmente e funções de planejamento e análise de longo prazo são 
+executadas na nuvem. Essa divisão de responsabilidades equilibra a necessidade de 
+velocidade com o aproveitamento de recursos computacionais de alto desempenho

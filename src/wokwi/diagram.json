@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Grupo 57 - FIAP",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 90, "left": 35, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 20, "left": 365, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btnPulse", "top": 160, "left": 355, "attrs": { "color": "red", "label": "PULSO" } },
+    { "type": "wokwi-slide-switch", "id": "swWifi", "top": 275, "left": 370, "attrs": { "label": "ONLINE" } },
+    { "type": "wokwi-led", "id": "ledAlert", "top": 375, "left": 372, "attrs": { "color": "red", "label": "ALERTA" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 418, "left": 430, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:3V3", "dht1:VCC", "red", [ "h35", "v-95", "h210" ] ],
+    [ "esp:GND.1", "dht1:GND", "black", [ "h20", "v-120", "h300" ] ],
+    [ "esp:D15", "dht1:SDA", "green", [ "h85", "v-70", "h145" ] ],
+    [ "esp:D18", "btnPulse:1.l", "green", [ "h145", "v-5", "h95" ] ],
+    [ "esp:GND.1", "btnPulse:2.l", "black", [ "h55", "v70", "h225", "v-10" ] ],
+    [ "esp:D19", "swWifi:2", "blue", [ "h165", "v65", "h110" ] ],
+    [ "esp:GND.2", "swWifi:1", "black", [ "h95", "v135", "h185" ] ],
+    [ "esp:D2", "r1:1", "red", [ "h125", "v230", "h215" ] ],
+    [ "r1:2", "ledAlert:A", "red", [ "h25", "v-40", "h-45" ] ],
+    [ "ledAlert:C", "esp:GND.2", "black", [ "h-70", "v-20", "h-190", "v-115" ] ]
+  ],
+  "dependencies": {}
+}
