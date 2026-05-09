@@ -41,6 +41,7 @@ int queueStart = 0;
 int queueCount = 0;
 
 unsigned long lastSampleAt = 0;
+unsigned long lastHeartbeatAt = 0;
 unsigned long pulseWindowStartedAt = 0;
 int pulseCount = 0;
 int lastPulseButtonState = HIGH;
@@ -229,6 +230,11 @@ VitalSample collectSample() {
 
 void setup() {
   Serial.begin(115200);
+  delay(1500);
+  Serial.println();
+  Serial.println("BOOT CardioIA - serial ativa");
+  Serial.flush();
+
   pinMode(PULSE_BUTTON_PIN, INPUT_PULLUP);
   pinMode(FORCE_OFFLINE_SWITCH_PIN, INPUT_PULLUP);
   pinMode(ALERT_LED_PIN, OUTPUT);
@@ -245,6 +251,21 @@ void setup() {
 }
 
 void loop() {
+  if (millis() - lastHeartbeatAt >= 2000) {
+    lastHeartbeatAt = millis();
+    Serial.print("HB millis=");
+    Serial.print(millis());
+    Serial.print(" wifi=");
+    Serial.print(WiFi.status());
+    Serial.print(" mqtt=");
+    Serial.print(mqtt.connected() ? "1" : "0");
+    Serial.print(" online=");
+    Serial.print(isConnectivityEnabled() ? "1" : "0");
+    Serial.print(" fila=");
+    Serial.println(queueCount);
+    Serial.flush();
+  }
+
   updatePulseCounter();
   ensureWifi();
   ensureMqtt();
