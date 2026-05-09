@@ -45,6 +45,7 @@ unsigned long lastHeartbeatAt = 0;
 unsigned long pulseWindowStartedAt = 0;
 int pulseCount = 0;
 int lastPulseButtonState = HIGH;
+float lastLoggedTemperature = -999;
 
 void enqueueSample(const VitalSample &sample) {
   int index = (queueStart + queueCount) % MAX_OFFLINE_SAMPLES;
@@ -182,6 +183,9 @@ void updatePulseCounter() {
   int state = digitalRead(PULSE_BUTTON_PIN);
   if (lastPulseButtonState == HIGH && state == LOW) {
     pulseCount++;
+    Serial.print("PULSO detectado. Contagem na janela: ");
+    Serial.println(pulseCount);
+    Serial.flush();
   }
   lastPulseButtonState = state;
 }
@@ -216,6 +220,16 @@ VitalSample collectSample() {
 
   bool alert = temperature > TEMP_ALERT_C || bpm > BPM_ALERT;
   digitalWrite(ALERT_LED_PIN, alert ? HIGH : LOW);
+
+  if (abs(temperature - lastLoggedTemperature) >= 0.1) {
+    lastLoggedTemperature = temperature;
+    Serial.print("DHT22 temperatura=");
+    Serial.print(temperature, 1);
+    Serial.print("C umidade=");
+    Serial.print(humidity, 1);
+    Serial.println("%");
+    Serial.flush();
+  }
 
   VitalSample sample = {
     millis(),
