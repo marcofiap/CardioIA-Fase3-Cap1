@@ -43,15 +43,19 @@ Tambem foram implementados os desafios "Ir Alem":
 ```text
 .
 |-- assets/
-|   `-- logo-fiap.png
+|   |-- logo-fiap.png
+|   `-- evidencias/
+|       `-- README.md
 |-- config/
 |   `-- mosquitto.conf
 |-- docs/
+|   |-- checklist_enunciado.md
 |   |-- referencias_apostilas_resumo.txt
 |   |-- relatorio_parte1_edge.md
 |   |-- relatorio_parte2_mqtt_dashboard.md
 |   |-- relatorio_ir_alem1_rest_email.md
-|   `-- relatorio_ir_alem2_ia_series_temporais.md
+|   |-- relatorio_ir_alem2_ia_series_temporais.md
+|   `-- roteiro_video.md
 |-- document/
 |   `-- ai_project_document_fiap.md
 |-- notebooks/
@@ -60,7 +64,8 @@ Tambem foram implementados os desafios "Ir Alem":
 |   |-- wokwi/
 |   |   |-- sketch.ino
 |   |   |-- diagram.json
-|   |   `-- libraries.txt
+|   |   |-- libraries.txt
+|   |   `-- wokwi.toml
 |   |-- node-red/
 |   |   `-- flows_cardioia_node_red.json
 |   `-- rest-email/
@@ -93,15 +98,24 @@ Tambem foram implementados os desafios "Ir Alem":
 
 ```bash
 npm install -g node-red
-cd ~/.node-red
-npm install node-red-dashboard
-node-red
+mkdir -p ~/.node-red
+npm install --prefix ~/.node-red node-red-dashboard
+node-red --userDir ~/.node-red
 ```
 
-2. Acesse `http://localhost:1880`.
+No PowerShell, se preferir:
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.node-red"
+npm install --prefix "$env:USERPROFILE\.node-red" node-red-dashboard
+node-red --userDir "$env:USERPROFILE\.node-red"
+```
+
+2. Acesse `http://127.0.0.1:1880`.
 3. Importe o fluxo `src/node-red/flows_cardioia_node_red.json`.
 4. Configure o broker MQTT no node `mqtt in`, se estiver usando HiveMQ Cloud ou Mosquitto local.
-5. Abra `http://localhost:1880/ui`.
+5. Clique em `Deploy`.
+6. Abra `http://127.0.0.1:1880/ui`.
 
 ### Ir Alem 1 - REST e e-mail
 
@@ -130,11 +144,18 @@ python -m notebook notebooks/ir_alem2_series_temporais_saude.ipynb
 
 ## Links para entrega
 
-Preencher apos publicacao:
-
+- GitHub publico: <https://github.com/marcofiap/CardioIA-Fase3-Cap1>
 - Link Wokwi: `INSERIR_LINK_DO_WOKWI`
-- Link GitHub publico: `INSERIR_LINK_DO_GITHUB`
 - Link video YouTube nao listado: `INSERIR_LINK_DO_VIDEO`
+
+## Evidencias para anexar antes da entrega final
+
+Salvar os prints em `assets/evidencias/`:
+
+- `wokwi_execucao.png`: simulacao rodando com Monitor Serial.
+- `node_red_flow.png`: fluxo importado no Node-RED.
+- `node_red_dashboard.png`: dashboard em `/ui`.
+- `alerta_dashboard.png`: exemplo com alerta ativo.
 
 ## Checklist do enunciado
 
@@ -148,6 +169,9 @@ Preencher apos publicacao:
 - [x] Relatorios das Partes 1 e 2.
 - [x] Ir Alem 1 com REST, risco e e-mail.
 - [x] Ir Alem 2 com comparacao entre modelo tradicional e neuromorfico.
+- [ ] Link publico do Wokwi preenchido.
+- [ ] Prints da execucao anexados.
+- [ ] Link do video de ate 4 minutos preenchido.
 
 ## Observacao academica
 
