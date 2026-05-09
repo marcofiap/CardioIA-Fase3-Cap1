@@ -51,6 +51,7 @@ Tambem foram implementados os desafios "Ir Alem":
 |-- docs/
 |   |-- checklist_enunciado.md
 |   |-- referencias_apostilas_resumo.txt
+|   |-- validacao_local.md
 |   |-- relatorio_parte1_edge.md
 |   |-- relatorio_parte2_mqtt_dashboard.md
 |   |-- relatorio_ir_alem1_rest_email.md
@@ -113,6 +114,22 @@ Os dois arquivos apontam para o mesmo firmware compilado em `.pio/build/esp32dev
 
 O projeto nao fixa manualmente `[net] gateway`, para deixar o Wokwi for VS Code/Cursor usar o gateway padrao da extensao. Se for necessario usar um gateway privado manual, rode o `wokwigw` e so entao adicione `gateway = "ws://localhost:9011"` aos arquivos `wokwi.toml`.
 
+Se o Wi-Fi nao conectar no simulador, verifique primeiro o Monitor Serial:
+
+- `chave=OFFLINE`: alterne a chave do circuito para a posicao online.
+- `chave=ONLINE` e `Wi-Fi indisponivel`: habilite o gateway IoT do Wokwi/Cursor ou use o Wokwi Web. No modo manual, rode `wokwigw` e adicione:
+
+```toml
+[net]
+gateway = "ws://localhost:9011"
+```
+
+Se o Wi-Fi conectar, mas o Node-RED nao receber os dados, confira no Monitor Serial:
+
+- `MQTT conectado.` e `MQTT publicado:` indicam que o ESP32 enviou para o broker.
+- `Publicacao bloqueada: MQTT nao conectado` indica problema entre o Wokwi e o broker.
+- O dashboard atual mostra BPM no grafico e temperatura no gauge; ao alterar a temperatura do DHT22, espere ate 5 segundos para a proxima amostra.
+
 ### Dashboard Node-RED
 
 1. Instale Node-RED e os dashboards:
@@ -162,6 +179,17 @@ Para publicar uma mensagem de teste no mesmo topico:
 node scripts/mqtt_publish_test.js
 ```
 
+Use esse teste para isolar o problema:
+
+- se o `mqtt_publish_test.js` aparece no Node-RED, o Node-RED esta correto e o problema esta no ESP32/Wokwi;
+- se o `mqtt_publish_test.js` nao aparece no Node-RED, revise o import do fluxo, o deploy e o broker do node MQTT.
+
+Para validar o caminho completo de publicacao e recebimento MQTT pelo broker:
+
+```bash
+node scripts/mqtt_loopback_test.js
+```
+
 ### Ir Alem 1 - REST e e-mail
 
 ```bash
@@ -201,6 +229,8 @@ Salvar os prints em `assets/evidencias/`:
 - `node_red_flow.png`: fluxo importado no Node-RED.
 - `node_red_dashboard.png`: dashboard em `/ui`.
 - `alerta_dashboard.png`: exemplo com alerta ativo.
+
+A validacao local de firmware, JSONs, REST/e-mail, MQTT e notebook esta documentada em `docs/validacao_local.md`.
 
 ## Checklist do enunciado
 

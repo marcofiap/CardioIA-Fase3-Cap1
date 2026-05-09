@@ -10,6 +10,7 @@
 
 const char *WIFI_SSID = "Wokwi-GUEST";
 const char *WIFI_PASSWORD = "";
+const int WIFI_CHANNEL = 6;
 
 // Ajustar para o broker usado na entrega. O broker publico facilita teste local.
 const char *MQTT_SERVER = "broker.hivemq.com";
@@ -88,9 +89,45 @@ bool isConnectivityEnabled() {
   return digitalRead(FORCE_OFFLINE_SWITCH_PIN) == HIGH;
 }
 
+String mqttStateDescription(int state) {
+  switch (state) {
+    case MQTT_CONNECTION_TIMEOUT:
+      return "timeout";
+    case MQTT_CONNECTION_LOST:
+      return "conexao perdida";
+    case MQTT_CONNECT_FAILED:
+      return "falha TCP";
+    case MQTT_DISCONNECTED:
+      return "desconectado";
+    case MQTT_CONNECTED:
+      return "conectado";
+    case MQTT_CONNECT_BAD_PROTOCOL:
+      return "protocolo recusado";
+    case MQTT_CONNECT_BAD_CLIENT_ID:
+      return "clientId recusado";
+    case MQTT_CONNECT_UNAVAILABLE:
+      return "broker indisponivel";
+    case MQTT_CONNECT_BAD_CREDENTIALS:
+      return "credenciais invalidas";
+    case MQTT_CONNECT_UNAUTHORIZED:
+      return "nao autorizado";
+    default:
+      return "estado " + String(state);
+  }
+}
+
+void printWifiStatus() {
+  wl_status_t status = WiFi.status();
+  Serial.print("Status Wi-Fi=");
+  Serial.print(status);
+  Serial.print(" chave=");
+  Serial.println(isConnectivityEnabled() ? "ONLINE" : "OFFLINE");
+}
+
 void ensureWifi() {
   if (!isConnectivityEnabled()) {
     if (WiFi.status() == WL_CONNECTED) {
+      Serial.println("Chave OFFLINE acionada. Desconectando Wi-Fi.");
       WiFi.disconnect(true);
     }
     return;
@@ -101,10 +138,11 @@ void ensureWifi() {
   }
 
   Serial.println("Conectando ao Wi-Fi simulado...");
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD, WIFI_CHANNEL);
 
   unsigned long startedAt = millis();
-  while (WiFi.status() != WL_CONNECTED && millis() - startedAt < 8000) {
+  while (WiFi.status() != WL_CONNECTED && millis() - startedAt < 15000) {
     delay(250);
     Serial.print(".");
   }
@@ -115,6 +153,7 @@ void ensureWifi() {
     Serial.println(WiFi.localIP());
   } else {
     Serial.println("Wi-Fi indisponivel. Coleta seguira em modo offline.");
+    printWifiStatus();
   }
 }
 
@@ -129,7 +168,12 @@ void ensureMqtt() {
   }
 
   String clientId = "cardioia-grupo57-" + String(random(0xffff), HEX);
-  Serial.println("Conectando ao broker MQTT...");
+  Serial.print("Conectando ao broker MQTT ");
+  Serial.print(MQTT_SERVER);
+  Serial.print(":");
+  Serial.print(MQTT_PORT);
+  Serial.print(" topico=");
+  Serial.println(MQTT_TOPIC);
 
   bool connected;
   if (String(MQTT_USER).length() > 0) {
@@ -138,16 +182,40 @@ void ensureMqtt() {
     connected = mqtt.connect(clientId.c_str());
   }
 
-  Serial.println(connected ? "MQTT conectado." : "Falha ao conectar MQTT.");
+  if (connected) {
+    Serial.println("MQTT conectado.");
+  } else {
+    Serial.print("Falha ao conectar MQTT. Estado=");
+    Serial.print(mqtt.state());
+    Serial.print(" (");
+    Serial.print(mqttStateDescription(mqtt.state()));
+    Serial.println(")");
+  }
 }
 
 bool publishSample(const VitalSample &sample) {
-  if (!isConnectivityEnabled() || WiFi.status() != WL_CONNECTED || !mqtt.connected()) {
+  if (!isConnectivityEnabled()) {
+    Serial.println("Publicacao bloqueada: chave em OFFLINE.");
+    return false;
+  }
+
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.print("Publicacao bloqueada: Wi-Fi nao conectado. Status=");
+    Serial.println(WiFi.status());
+    return false;
+  }
+
+  if (!mqtt.connected()) {
+    Serial.print("Publicacao bloqueada: MQTT nao conectado. Estado=");
+    Serial.print(mqtt.state());
+    Serial.print(" (");
+    Serial.print(mqttStateDescription(mqtt.state()));
+    Serial.println(")");
     return false;
   }
 
   String payload = sampleToJson(sample);
-  bool published = mqtt.publish(MQTT_TOPIC, payload.c_str());
+  bool published = mqtt.publish(MQTT_TOPIC, payload.c_str(), true);
 
   Serial.print(published ? "MQTT publicado: " : "Falha MQTT, mantendo local: ");
   Serial.println(payload);
@@ -258,10 +326,13 @@ void setup() {
   pulseWindowStartedAt = millis();
 
   Serial.println("CardioIA Conectada - ESP32 iniciado.");
-  Serial.println("Chave OFFLINE aberta: envia MQTT. Chave OFFLINE fechada: guarda na fila local.");
+  Serial.println("Chave em ONLINE: conecta Wi-Fi/MQTT. Chave em OFFLINE: guarda na fila local.");
   Serial.print("Capacidade da fila offline: ");
   Serial.print(MAX_OFFLINE_SAMPLES);
   Serial.println(" amostras.");
+  Serial.print("Estado inicial da chave (D19): ");
+  Serial.println(digitalRead(FORCE_OFFLINE_SWITCH_PIN) == HIGH ? "HIGH (ONLINE)" : "LOW (OFFLINE)");
+  printWifiStatus();
 }
 
 void loop() {

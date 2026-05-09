@@ -55,3 +55,7 @@
 2. Importar o fluxo no Node-RED, executar e salvar prints em `assets/evidencias/`.
 3. Gravar video de ate 4 minutos e preencher o link no README.
 4. Fazer commit e push das evidencias finais.
+
+## Validacao local executada
+
+Os testes locais de firmware, JSONs, REST/e-mail, MQTT e notebook estao registrados em `docs/validacao_local.md`.
