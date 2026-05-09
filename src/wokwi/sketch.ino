@@ -243,7 +243,7 @@ VitalSample collectSample() {
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200, SERIAL_8N1, 3, 1);
   delay(1500);
   Serial.println();
   Serial.println("BOOT CardioIA - serial ativa");
