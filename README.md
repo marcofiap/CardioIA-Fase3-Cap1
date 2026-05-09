@@ -64,8 +64,7 @@ Tambem foram implementados os desafios "Ir Alem":
 |   |-- wokwi/
 |   |   |-- sketch.ino
 |   |   |-- diagram.json
-|   |   |-- libraries.txt
-|   |   `-- wokwi.toml
+|   |   `-- libraries.txt
 |   |-- node-red/
 |   |   `-- flows_cardioia_node_red.json
 |   `-- rest-email/
@@ -98,7 +97,13 @@ No Cursor/VS Code, o projeto tambem expoe a serial simulada na porta `4000`. Par
 python scripts/wokwi_serial_monitor.py
 ```
 
-Se a extensao pedir um arquivo de configuracao, selecione `wokwi.toml` na raiz do projeto. O arquivo tambem declara o gateway de rede local em `ws://localhost:9011`, usado pelo Wokwi for VS Code para Wi-Fi/Internet do ESP32.
+Se a extensao pedir um arquivo de configuracao, selecione sempre `wokwi.toml` na raiz do projeto:
+
+```text
+C:\fiap\2 ano\fase3cap1\wokwi.toml
+```
+
+Nao use um `wokwi.toml` dentro de `src/wokwi`, para evitar que a extensao carregue caminhos de firmware diferentes. O arquivo da raiz tambem declara o gateway de rede local em `ws://localhost:9011`, usado pelo Wokwi for VS Code para Wi-Fi/Internet do ESP32.
 
 ### Dashboard Node-RED
 
