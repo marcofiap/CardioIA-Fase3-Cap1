@@ -117,6 +117,18 @@ node-red --userDir "$env:USERPROFILE\.node-red"
 5. Clique em `Deploy`.
 6. Abra `http://127.0.0.1:1880/ui`.
 
+Para monitorar no terminal se as mensagens MQTT estao chegando ao broker:
+
+```bash
+node scripts/mqtt_monitor.js
+```
+
+Para publicar uma mensagem de teste no mesmo topico:
+
+```bash
+node scripts/mqtt_publish_test.js
+```
+
 ### Ir Alem 1 - REST e e-mail
 
 ```bash
