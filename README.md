@@ -97,13 +97,19 @@ No Cursor/VS Code, o projeto tambem expoe a serial simulada na porta `4000`. Par
 python scripts/wokwi_serial_monitor.py
 ```
 
-Se a extensao pedir um arquivo de configuracao, selecione sempre `wokwi.toml` na raiz do projeto:
+Se a extensao pedir um arquivo de configuracao e o workspace aberto for a raiz do projeto, selecione:
 
 ```text
 C:\fiap\2 ano\fase3cap1\wokwi.toml
 ```
 
-Nao use um `wokwi.toml` dentro de `src/wokwi`, para evitar que a extensao carregue caminhos de firmware diferentes. O arquivo da raiz tambem declara o gateway de rede local em `ws://localhost:9011`, usado pelo Wokwi for VS Code para Wi-Fi/Internet do ESP32.
+Se o Cursor/Wokwi estiver iniciando a simulacao a partir da pasta `src\wokwi`, use:
+
+```text
+C:\fiap\2 ano\fase3cap1\src\wokwi\wokwi.toml
+```
+
+Os dois arquivos apontam para o mesmo firmware compilado em `.pio/build/esp32dev/`, entao nao ha diferenca funcional. Eles existem apenas para cobrir os dois modos como a extensao Wokwi pode resolver o workspace.
 
 ### Dashboard Node-RED
 
