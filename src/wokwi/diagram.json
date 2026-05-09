@@ -6,7 +6,7 @@
     { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 90, "left": 35, "attrs": {} },
     { "type": "wokwi-dht22", "id": "dht1", "top": 20, "left": 365, "attrs": {} },
     { "type": "wokwi-pushbutton", "id": "btnPulse", "top": 160, "left": 355, "attrs": { "color": "red", "label": "PULSO" } },
-    { "type": "wokwi-slide-switch", "id": "swWifi", "top": 275, "left": 370, "attrs": { "label": "ONLINE" } },
+    { "type": "wokwi-slide-switch", "id": "swWifi", "top": 275, "left": 370, "attrs": { "label": "OFFLINE" } },
     { "type": "wokwi-led", "id": "ledAlert", "top": 375, "left": 372, "attrs": { "color": "red", "label": "ALERTA" } },
     { "type": "wokwi-resistor", "id": "r1", "top": 418, "left": 430, "attrs": { "value": "220" } }
   ],

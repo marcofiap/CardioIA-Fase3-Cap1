@@ -19,8 +19,8 @@ O firmware executa um ciclo continuo:
    - temperatura acima de 38 C;
    - BPM acima de 120.
 4. Acende o LED local de alerta quando alguma regra e violada.
-5. Se a chave de conectividade estiver ligada, tenta publicar o JSON no topico MQTT.
-6. Se estiver offline, grava a amostra em uma fila circular na memoria.
+5. Em operacao normal, tenta publicar o JSON no topico MQTT.
+6. Se a chave `OFFLINE` estiver fechada ou houver falha de rede, grava a amostra em uma fila circular na memoria.
 7. Quando a conectividade retorna, sincroniza as amostras pendentes em ordem.
 
 Esse desenho segue o conceito de Edge Computing das apostilas da Fase 3: decisoes imediatas sao tomadas perto da origem do dado, reduzindo dependencia da nuvem em uma situacao de saude que pode ser critica.
@@ -38,6 +38,11 @@ A fila foi limitada a 120 amostras. Com intervalo de coleta de 5 segundos, isso 
 Essa escolha e coerente com o modelo da CardioIA como solucao vestivel conectada: quedas curtas de rede devem ser absorvidas localmente, mas uma indisponibilidade longa exige alerta operacional, troca de gateway ou reconexao do paciente.
 
 Quando a fila atinge a capacidade maxima, a amostra mais antiga e descartada. Essa decisao prioriza dados recentes, pois em monitoramento continuo de risco cardiologico o estado atual do paciente e mais relevante para alertas imediatos.
+
+No Wokwi, a chave `OFFLINE` foi configurada para facilitar a demonstracao:
+
+- aberta: sistema tenta conectar Wi-Fi e publicar MQTT;
+- fechada: sistema simula queda de conectividade e guarda leituras na fila local.
 
 ## Dados coletados
 

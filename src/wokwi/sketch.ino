@@ -5,7 +5,7 @@
 #define DHT_PIN 15
 #define DHT_TYPE DHT22
 #define PULSE_BUTTON_PIN 18
-#define CONNECTIVITY_SWITCH_PIN 19
+#define FORCE_OFFLINE_SWITCH_PIN 19
 #define ALERT_LED_PIN 2
 
 const char *WIFI_SSID = "Wokwi-GUEST";
@@ -83,7 +83,7 @@ String sampleToJson(const VitalSample &sample) {
 }
 
 bool isConnectivityEnabled() {
-  return digitalRead(CONNECTIVITY_SWITCH_PIN) == LOW;
+  return digitalRead(FORCE_OFFLINE_SWITCH_PIN) == HIGH;
 }
 
 void ensureWifi() {
@@ -230,7 +230,7 @@ VitalSample collectSample() {
 void setup() {
   Serial.begin(115200);
   pinMode(PULSE_BUTTON_PIN, INPUT_PULLUP);
-  pinMode(CONNECTIVITY_SWITCH_PIN, INPUT_PULLUP);
+  pinMode(FORCE_OFFLINE_SWITCH_PIN, INPUT_PULLUP);
   pinMode(ALERT_LED_PIN, OUTPUT);
 
   dht.begin();
@@ -238,6 +238,7 @@ void setup() {
   pulseWindowStartedAt = millis();
 
   Serial.println("CardioIA Conectada - ESP32 iniciado.");
+  Serial.println("Chave OFFLINE aberta: envia MQTT. Chave OFFLINE fechada: guarda na fila local.");
   Serial.print("Capacidade da fila offline: ");
   Serial.print(MAX_OFFLINE_SAMPLES);
   Serial.println(" amostras.");

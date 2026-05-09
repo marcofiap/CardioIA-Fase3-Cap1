@@ -9,7 +9,7 @@
 | Sensor obrigatorio DHT22 | Atendido | `DHT_PIN`, `DHT_TYPE` e leitura em `src/wokwi/sketch.ino` |
 | Segundo sensor livre | Atendido | Botao de pressao para simular BPM |
 | Armazenamento local ou alternativa ao SPIFFS | Atendido | Fila circular em memoria, documentada em `docs/relatorio_parte1_edge.md` |
-| Simular conectividade Wi-Fi booleana | Atendido | Chave `ONLINE` no Wokwi, pino `CONNECTIVITY_SWITCH_PIN` |
+| Simular conectividade Wi-Fi booleana | Atendido | Chave `OFFLINE` no Wokwi, pino `FORCE_OFFLINE_SWITCH_PIN` |
 | Quando conectado, enviar dados e limpar pendencias | Atendido | `syncOfflineQueue()` publica MQTT e remove amostras da fila |
 | Resiliencia offline | Atendido | `MAX_OFFLINE_SAMPLES = 120`, fila circular |
 | Codigo C++ comentado | Atendido | `src/wokwi/sketch.ino` |
