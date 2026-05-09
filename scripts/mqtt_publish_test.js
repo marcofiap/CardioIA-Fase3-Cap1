@@ -13,10 +13,19 @@ const payload = {
 
 const client = mqtt.connect(brokerUrl, {
   clientId: "cardioia-terminal-publisher-" + Math.random().toString(16).slice(2),
+  connectTimeout: 10000,
+  reconnectPeriod: 0,
 });
 
+const timeout = setTimeout(() => {
+  console.error("[MQTT] timeout ao publicar");
+  client.end(true);
+}, 15000);
+
 client.on("connect", () => {
+  console.log(`[MQTT] conectado em ${brokerUrl}`);
   client.publish(topic, JSON.stringify(payload), { qos: 0 }, (error) => {
+    clearTimeout(timeout);
     if (error) {
       console.error("[MQTT] erro ao publicar:", error.message);
     } else {
@@ -28,6 +37,7 @@ client.on("connect", () => {
 });
 
 client.on("error", (error) => {
+  clearTimeout(timeout);
   console.error("[MQTT] erro:", error.message);
   client.end(true);
 });

@@ -9,11 +9,12 @@ const client = mqtt.connect(brokerUrl, {
 
 client.on("connect", () => {
   console.log(`[MQTT] conectado em ${brokerUrl}`);
-  console.log(`[MQTT] ouvindo topico: ${topic}`);
   client.subscribe(topic, (error) => {
     if (error) {
       console.error("[MQTT] erro ao assinar topico:", error.message);
       client.end(true);
+    } else {
+      console.log(`[MQTT] assinatura ativa: ${topic}`);
     }
   });
 });
