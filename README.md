@@ -92,6 +92,14 @@ Tambem foram implementados os desafios "Ir Alem":
    - fila local de resiliencia;
    - publicacoes MQTT.
 
+No Cursor/VS Code, o projeto tambem expoe a serial simulada na porta `4000`. Para acompanhar logs no terminal:
+
+```bash
+python scripts/wokwi_serial_monitor.py
+```
+
+Se a extensao pedir um arquivo de configuracao, selecione `wokwi.toml` na raiz do projeto. O arquivo tambem declara o gateway de rede local em `ws://localhost:9011`, usado pelo Wokwi for VS Code para Wi-Fi/Internet do ESP32.
+
 ### Dashboard Node-RED
 
 1. Instale Node-RED e os dashboards:
