@@ -123,6 +123,18 @@ Para monitorar no terminal se as mensagens MQTT estao chegando ao broker:
 node scripts/mqtt_monitor.js
 ```
 
+O fluxo Node-RED tambem registra no terminal cada payload que chega do MQTT. Para ver esse log, rode o Node-RED em primeiro plano:
+
+```bash
+node-red --userDir ~/.node-red
+```
+
+Quando o Wokwi publicar, o terminal deve exibir linhas parecidas com:
+
+```text
+CardioIA MQTT recebido: {"deviceId":"cardioia-esp32-grupo57","temperature":39.4,"humidity":40,"bpm":88,"alert":true}
+```
+
 Para publicar uma mensagem de teste no mesmo topico:
 
 ```bash

@@ -33,7 +33,22 @@
     "pretty": false,
     "x": 330,
     "y": 100,
-    "wires": [["split-metrics", "debug-payload"]]
+    "wires": [["log-terminal", "split-metrics", "debug-payload"]]
+  },
+  {
+    "id": "log-terminal",
+    "type": "function",
+    "z": "cardioia-tab",
+    "name": "Log terminal",
+    "func": "node.warn('CardioIA MQTT recebido: ' + JSON.stringify(msg.payload));\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 520,
+    "y": 60,
+    "wires": [[]]
   },
   {
     "id": "split-metrics",
@@ -144,7 +159,7 @@
     "name": "Payload recebido",
     "active": true,
     "tosidebar": true,
-    "console": false,
+    "console": true,
     "tostatus": false,
     "complete": "payload",
     "targetType": "msg",
