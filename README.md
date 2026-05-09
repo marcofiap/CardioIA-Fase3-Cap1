@@ -111,6 +111,8 @@ C:\fiap\2 ano\fase3cap1\src\wokwi\wokwi.toml
 
 Os dois arquivos apontam para o mesmo firmware compilado em `.pio/build/esp32dev/`, entao nao ha diferenca funcional. Eles existem apenas para cobrir os dois modos como a extensao Wokwi pode resolver o workspace.
 
+O projeto nao fixa manualmente `[net] gateway`, para deixar o Wokwi for VS Code/Cursor usar o gateway padrao da extensao. Se for necessario usar um gateway privado manual, rode o `wokwigw` e so entao adicione `gateway = "ws://localhost:9011"` aos arquivos `wokwi.toml`.
+
 ### Dashboard Node-RED
 
 1. Instale Node-RED e os dashboards:

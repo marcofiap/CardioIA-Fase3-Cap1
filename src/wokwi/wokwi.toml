@@ -4,6 +4,3 @@ firmware = "../../.pio/build/esp32dev/firmware.bin"
 elf = "../../.pio/build/esp32dev/firmware.elf"
 diagram = "diagram.json"
 rfc2217ServerPort = 4000
-
-[net]
-gateway = "ws://localhost:9011"
