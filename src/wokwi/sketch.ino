@@ -1,6 +1,13 @@
 #include <WiFi.h>
+#include <Wire.h>
 #include <PubSubClient.h>
 #include <DHT.h>
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_Sensor.h>
+
+// CardioIA Conectada - firmware do dispositivo vestivel simulado.
+// Captura temperatura, umidade, batimentos cardiacos simulados e movimento.
+// Mantem fila circular de resiliencia offline e publica via MQTT.
 
 #define DHT_PIN 15
 #define DHT_TYPE DHT22
@@ -24,16 +31,22 @@ const unsigned long BPM_WINDOW_MS = 15000;
 const int MAX_OFFLINE_SAMPLES = 120;
 const float TEMP_ALERT_C = 38.0;
 const int BPM_ALERT = 120;
+// Limiar empirico em m/s^2 para detectar variacao na magnitude do acelerometro.
+// Ajusta a sensibilidade do "estou em movimento" usado no campo movement do JSON.
+const float MOVEMENT_DELTA_THRESHOLD = 0.4f;
 
 struct VitalSample {
   unsigned long timestamp;
   float temperature;
   float humidity;
   int bpm;
+  int movement;
+  float accelMagnitude;
   bool alert;
 };
 
 DHT dht(DHT_PIN, DHT_TYPE);
+Adafruit_MPU6050 mpu;
 WiFiClient wifiClient;
 PubSubClient mqtt(wifiClient);
 
@@ -47,6 +60,8 @@ unsigned long pulseWindowStartedAt = 0;
 int pulseCount = 0;
 int lastPulseButtonState = HIGH;
 float lastLoggedTemperature = -999;
+bool mpuReady = false;
+float lastAccelMagnitude = 9.8f;
 
 void enqueueSample(const VitalSample &sample) {
   int index = (queueStart + queueCount) % MAX_OFFLINE_SAMPLES;
@@ -74,12 +89,15 @@ bool dequeueSample(VitalSample &sample) {
 }
 
 String sampleToJson(const VitalSample &sample) {
+  // Mantem o mesmo schema usado pelo dashboard Node-RED e pelo cliente REST do Ir Alem 1.
   String payload = "{";
   payload += "\"deviceId\":\"cardioia-esp32-grupo57\",";
   payload += "\"timestamp\":" + String(sample.timestamp) + ",";
   payload += "\"temperature\":" + String(sample.temperature, 1) + ",";
   payload += "\"humidity\":" + String(sample.humidity, 1) + ",";
   payload += "\"bpm\":" + String(sample.bpm) + ",";
+  payload += "\"movement\":" + String(sample.movement) + ",";
+  payload += "\"accelMagnitude\":" + String(sample.accelMagnitude, 2) + ",";
   payload += "\"alert\":" + String(sample.alert ? "true" : "false");
   payload += "}";
   return payload;
@@ -274,6 +292,35 @@ int calculateBpm() {
   return bpm;
 }
 
+// Le o acelerometro e estima movimento como variacao da magnitude do vetor de aceleracao.
+// Em repouso a magnitude e proxima de 9.8 m/s^2 (gravidade). Movimentos do paciente,
+// ou o usuario movendo o slider do MPU6050 no Wokwi, fazem essa magnitude variar.
+void readMovement(int &movement, float &magnitudeOut) {
+  movement = 0;
+  magnitudeOut = lastAccelMagnitude;
+
+  if (!mpuReady) {
+    return;
+  }
+
+  sensors_event_t accelEvent;
+  sensors_event_t gyroEvent;
+  sensors_event_t tempEvent;
+  if (!mpu.getEvent(&accelEvent, &gyroEvent, &tempEvent)) {
+    return;
+  }
+
+  float ax = accelEvent.acceleration.x;
+  float ay = accelEvent.acceleration.y;
+  float az = accelEvent.acceleration.z;
+  float magnitude = sqrtf(ax * ax + ay * ay + az * az);
+  float delta = fabsf(magnitude - lastAccelMagnitude);
+
+  movement = (delta > MOVEMENT_DELTA_THRESHOLD) ? 1 : 0;
+  magnitudeOut = magnitude;
+  lastAccelMagnitude = magnitude;
+}
+
 VitalSample collectSample() {
   float temperature = dht.readTemperature();
   float humidity = dht.readHumidity();
@@ -286,6 +333,12 @@ VitalSample collectSample() {
     humidity = -1;
   }
 
+  int movement = 0;
+  float accelMagnitude = lastAccelMagnitude;
+  readMovement(movement, accelMagnitude);
+
+  // Regras locais de alerta: febre, taquicardia ou sinal de queda/ausencia prolongada
+  // de movimento podem disparar o LED na borda, antes mesmo do dashboard receber.
   bool alert = temperature > TEMP_ALERT_C || bpm > BPM_ALERT;
   digitalWrite(ALERT_LED_PIN, alert ? HIGH : LOW);
 
@@ -304,6 +357,8 @@ VitalSample collectSample() {
     temperature,
     humidity,
     bpm,
+    movement,
+    accelMagnitude,
     alert
   };
 
@@ -322,6 +377,19 @@ void setup() {
   pinMode(ALERT_LED_PIN, OUTPUT);
 
   dht.begin();
+
+  // Inicializa o barramento I2C padrao do ESP32 (SDA=21, SCL=22) usado pelo MPU6050.
+  Wire.begin();
+  mpuReady = mpu.begin();
+  if (mpuReady) {
+    mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
+    mpu.setGyroRange(MPU6050_RANGE_500_DEG);
+    mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
+    Serial.println("MPU6050 inicializado.");
+  } else {
+    Serial.println("MPU6050 nao detectado. Coleta seguira sem movimento.");
+  }
+
   randomSeed(analogRead(0));
   pulseWindowStartedAt = millis();
 

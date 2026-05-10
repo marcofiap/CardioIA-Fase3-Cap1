@@ -1,2 +1,4 @@
 DHT sensor library
 PubSubClient
+Adafruit MPU6050
+Adafruit Unified Sensor

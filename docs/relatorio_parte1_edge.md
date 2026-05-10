@@ -1,52 +1,79 @@
-# Relatorio Parte 1 - Armazenamento e processamento local
+# Relatorio Parte 1 - Armazenamento e processamento local (Edge Computing)
 
 ## Contexto
 
-A Parte 1 da atividade foi implementada como uma simulacao de dispositivo vestivel da CardioIA usando ESP32 no Wokwi. O objetivo e demonstrar como a camada de borda pode continuar coletando sinais vitais mesmo quando a comunicacao com a nuvem esta indisponivel.
+A Parte 1 da atividade implementa o nucleo do dispositivo vestivel da CardioIA usando ESP32 simulado no Wokwi. O foco e o papel da **Edge Computing**: capturar sinais vitais, decidir localmente sobre alertas e manter resiliencia mesmo quando a rede esta indisponivel. As decisoes seguem o material da Fase 3, capitulos 8 (Cloud Computing como Pilar da IoT Moderna) e 9 (Inteligencia na Borda: Fog e Edge Computing Transformando a IoT).
 
-O prototipo usa dois sensores:
+O prototipo usa tres sensores, alem dos atuadores de demonstracao:
 
-- DHT22, considerado um sensor fisico, para temperatura e umidade;
-- botao de pressao, usado como sensor adicional para simular batimentos cardiacos.
+- **DHT22** (sensor obrigatorio do enunciado): mede temperatura e umidade do ambiente proximo ao paciente.
+- **Botao de pressao** (segundo sensor de livre escolha): cada acionamento e contado como um batimento cardiaco simulado, permitindo demonstrar o fluxo de pulso.
+- **MPU6050** (sensor adicional, alinhado com as apostilas Cap 8 e 9 e com o desafio Ir Alem 1): acelerometro I2C que detecta movimento do paciente.
+
+Tambem ha uma chave deslizante usada como variavel booleana de conectividade Wi-Fi, um LED de alerta e um resistor de protecao.
+
+## Diagrama do circuito
+
+```text
++---------------------+        +-----------------+
+|        ESP32        |--3V3---| DHT22 (temp/um) |
+|                     |--GND---|                 |
+|                     |--D15---| SDA             |
+|                     |        +-----------------+
+|                     |
+|                     |--3V3---+-----------------+
+|                     |--GND---|     MPU6050     |
+|                     |--D21---| SDA  (I2C)      |
+|                     |--D22---| SCL  (I2C)      |
+|                     |        +-----------------+
+|                     |
+|                     |--D18---+ Botao PULSO (PULL-UP)
+|                     |--GND---|
+|                     |
+|                     |--D19---+ Slide ONLINE/OFFLINE
+|                     |--3V3---|  (3V3 = ONLINE, GND = OFFLINE)
+|                     |--GND---|
+|                     |
+|                     |--D2----R220--LED ALERTA--GND
++---------------------+
+```
 
 ## Fluxo de funcionamento
 
-O firmware executa um ciclo continuo:
+1. **Boot**: o firmware inicializa Serial, DHT22, I2C/MPU6050 e atribui os modos dos pinos. Loga o estado inicial da chave de conectividade.
+2. **Coleta** a cada 5 segundos (`SAMPLE_INTERVAL_MS`):
+   - le temperatura e umidade do DHT22;
+   - calcula BPM com base na contagem de pulsos numa janela de 15 segundos;
+   - calcula movimento como variacao da magnitude do vetor de aceleracao (`|delta| > 0.4 m/s^2 -> movement = 1`);
+   - aplica regras locais de alerta (`temperatura > 38 C` ou `BPM > 120`) e atualiza o LED de alerta na borda.
+3. **Decisao de transporte**:
+   - se a chave esta em `ONLINE` e ha Wi-Fi e MQTT, publica o JSON no topico `fiap/cardioia/grupo57/vitals` com flag `retained=true`;
+   - caso contrario, enfileira a amostra na fila circular local de 120 posicoes.
+4. **Sincronizacao** automatica: quando a conectividade volta, `syncOfflineQueue()` drena a fila publicando uma amostra de cada vez e logando cada publicacao no Serial.
+5. **Heartbeat**: a cada 2 segundos o firmware imprime no Serial um resumo (`HB millis= wifi= mqtt= online= fila=`) que ajuda diagnosticar a simulacao no Wokwi e nas evidencias do video.
 
-1. Le a temperatura e a umidade do DHT22.
-2. Conta acionamentos do botao em uma janela temporal e converte essa contagem em BPM.
-3. Aplica regras locais de risco:
-   - temperatura acima de 38 C;
-   - BPM acima de 120.
-4. Acende o LED local de alerta quando alguma regra e violada.
-5. Em operacao normal, tenta publicar o JSON no topico MQTT.
-6. Se a chave `OFFLINE` estiver fechada ou houver falha de rede, grava a amostra em uma fila circular na memoria.
-7. Quando a conectividade retorna, sincroniza as amostras pendentes em ordem.
+## Resiliencia offline (Edge Computing)
 
-Esse desenho segue o conceito de Edge Computing das apostilas da Fase 3: decisoes imediatas sao tomadas perto da origem do dado, reduzindo dependencia da nuvem em uma situacao de saude que pode ser critica.
+O enunciado destaca que SPIFFS nao persiste no Wokwi e indica como alternativa o Monitor Serial. A entrega usa uma estrategia mais robusta sem depender de hardware fisico: uma **fila circular em memoria** com capacidade configuravel, exibida pelo Serial.
 
-## Resiliencia offline
-
-O enunciado explica que o SPIFFS no Wokwi e volatil e nao preserva arquivos quando a simulacao termina. Por isso, a entrega usa uma estrategia alternativa alinhada ao simulador: uma fila circular em memoria, exibida pelo Monitor Serial.
-
-A fila foi limitada a 120 amostras. Com intervalo de coleta de 5 segundos, isso representa cerca de 10 minutos de autonomia offline:
+A capacidade foi fixada em 120 amostras. Considerando intervalo de 5 segundos por amostra, isso representa 10 minutos de autonomia offline:
 
 ```text
 120 amostras * 5 segundos = 600 segundos = 10 minutos
 ```
 
-Essa escolha e coerente com o modelo da CardioIA como solucao vestivel conectada: quedas curtas de rede devem ser absorvidas localmente, mas uma indisponibilidade longa exige alerta operacional, troca de gateway ou reconexao do paciente.
+Justificativa do dimensionamento:
 
-Quando a fila atinge a capacidade maxima, a amostra mais antiga e descartada. Essa decisao prioriza dados recentes, pois em monitoramento continuo de risco cardiologico o estado atual do paciente e mais relevante para alertas imediatos.
+- modelo de negocio CardioIA pressupoe wearable com Wi-Fi residencial. Quedas curtas de rede (mudanca de comodo, oscilacao do roteador) sao absorvidas localmente sem perda de dado.
+- 10 minutos cobre boa parte das interrupcoes residenciais reais sem inflar memoria do ESP32.
+- quando a fila atinge a capacidade, a amostra mais antiga e descartada: em monitoramento cardiologico, o estado atual e mais relevante para o alerta imediato do que dados antigos.
+- queda longa de rede deveria gerar alerta operacional, troca de gateway ou reconexao do paciente, fora do escopo do firmware.
 
-No Wokwi, a chave `OFFLINE` foi configurada para facilitar a demonstracao:
+Para um dispositivo real, o mesmo desenho pode ser adaptado para SPIFFS ou microSD, persistindo o array em arquivo. Como o enunciado considera SPIFFS opcional e apenas para chips fisicos, o relatorio mantem o registro da estrategia em memoria.
 
-- aberta: sistema tenta conectar Wi-Fi e publicar MQTT;
-- fechada: sistema simula queda de conectividade e guarda leituras na fila local.
+## Lendo o JSON gerado
 
-## Dados coletados
-
-Cada amostra e representada como JSON:
+Cada amostra coletada vira o seguinte JSON (publicado por MQTT ou logado por Serial em modo offline):
 
 ```json
 {
@@ -55,20 +82,20 @@ Cada amostra e representada como JSON:
   "temperature": 36.8,
   "humidity": 52.4,
   "bpm": 82,
+  "movement": 0,
+  "accelMagnitude": 9.81,
   "alert": false
 }
 ```
 
-## Consideracoes de seguranca
+O mesmo schema e consumido pelo dashboard Node-RED da Parte 2 e pelo cliente REST do Ir Alem 1.
 
-Em uma aplicacao real, o dispositivo nao deveria transmitir dados de saude em broker publico sem criptografia. A versao academica usa broker MQTT simples para facilitar a reproducao, mas o desenho recomenda:
+## Decisoes de seguranca aplicadas na borda
 
-- MQTT com TLS;
-- usuario e senha por dispositivo;
-- topicos segregados por identificador tecnico, sem nome do paciente;
-- politicas de retencao minima;
-- tratamento conforme LGPD;
-- validacao clinica antes de qualquer uso assistencial.
+- LED de alerta acionado localmente, nao depende da nuvem: garante que o paciente ou cuidador veja o sinal mesmo offline.
+- regras simples e auditaveis (`>38 C`, `>120 bpm`), explicaveis a profissional de saude.
+- `Serial.print` mascarado: nenhum dado pessoal e enviado, apenas identificador tecnico do dispositivo.
+- broker MQTT pode ser facilmente trocado para HiveMQ Cloud com TLS e credenciais sem mudar o restante do firmware. As implicacoes de seguranca/LGPD estao detalhadas em `docs/reflexao_seguranca_lgpd.md`.
 
 ## Link Wokwi
 

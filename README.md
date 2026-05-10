@@ -28,10 +28,45 @@ O sistema simula o fluxo completo de dados em saude digital:
 captura -> edge/resiliencia -> MQTT -> fog/cloud -> dashboard -> alerta
 ```
 
-O prototipo usa dois sensores no Wokwi:
+### Arquitetura Edge / Fog / Cloud
 
-- DHT22 para temperatura e umidade;
-- botao de pressao como sensor de pulso, simulando batimentos por minuto.
+```mermaid
+flowchart LR
+    subgraph EDGE [Edge - ESP32 no Wokwi]
+        A1[DHT22<br/>temperatura e umidade] --> SK
+        A2[MPU6050<br/>movimento] --> SK
+        A3[Botao PULSO<br/>BPM simulado] --> SK
+        SK[firmware C++<br/>fila circular 120 amostras<br/>regras de alerta locais]
+        SK -.LED.-> A4[LED ALERTA]
+    end
+
+    subgraph CLOUD [Cloud - Broker MQTT]
+        B[(HiveMQ public ou Cloud<br/>topico fiap/cardioia/grupo57/vitals)]
+    end
+
+    subgraph FOG [Fog - Node-RED local]
+        F1[mqtt in] --> F2[function<br/>Normalizar e separar]
+        F2 --> F3[ui_chart BPM]
+        F2 --> F4[ui_gauge Temperatura]
+        F2 --> F5[ui_text Alerta]
+        F2 --> F6[ui_template LED virtual]
+        F2 --> F7[ui_text Movimento]
+    end
+
+    subgraph IRALEM [Ir Alem 1 e 2]
+        R[REST mock + risco + e-mail<br/>Python httpx + smtplib]
+        N[Notebook IA<br/>Regressao logistica vs LIF]
+    end
+
+    SK -- MQTT publish --> B
+    B -- MQTT subscribe --> F1
+```
+
+O prototipo usa tres sensores no Wokwi:
+
+- DHT22 para temperatura e umidade (sensor obrigatorio do enunciado);
+- botao de pressao como sensor de pulso, simulando batimentos por minuto;
+- MPU6050 (acelerometro I2C) para detectar movimento, alinhado com o exemplo das apostilas Cap 8 e 9 da Fase 3.
 
 Tambem foram implementados os desafios "Ir Alem":
 
@@ -56,11 +91,18 @@ Tambem foram implementados os desafios "Ir Alem":
 |   |-- relatorio_parte2_mqtt_dashboard.md
 |   |-- relatorio_ir_alem1_rest_email.md
 |   |-- relatorio_ir_alem2_ia_series_temporais.md
+|   |-- reflexao_seguranca_lgpd.md
 |   `-- roteiro_video.md
 |-- document/
 |   `-- ai_project_document_fiap.md
 |-- notebooks/
 |   `-- ir_alem2_series_temporais_saude.ipynb
+|-- scripts/
+|   |-- compute_ir_alem2_metrics.py
+|   |-- mqtt_loopback_test.js
+|   |-- mqtt_monitor.js
+|   |-- mqtt_publish_test.js
+|   `-- wokwi_serial_monitor.py
 |-- src/
 |   |-- wokwi/
 |   |   |-- sketch.ino
@@ -215,6 +257,21 @@ pip install numpy pandas scikit-learn matplotlib notebook
 python -m notebook notebooks/ir_alem2_series_temporais_saude.ipynb
 ```
 
+Para reproduzir as metricas de forma headless (util para CI ou para citar no relatorio):
+
+```bash
+python scripts/compute_ir_alem2_metrics.py
+```
+
+## Documentacao adicional
+
+- `docs/relatorio_parte1_edge.md` - Edge Computing, fila circular e diagrama do circuito.
+- `docs/relatorio_parte2_mqtt_dashboard.md` - MQTT, HiveMQ, QoS e mapeamento Node-RED.
+- `docs/relatorio_ir_alem1_rest_email.md` - REST, regras de risco e e-mail.
+- `docs/relatorio_ir_alem2_ia_series_temporais.md` - regressao logistica vs LIF, com metricas.
+- `docs/reflexao_seguranca_lgpd.md` - reflexao sobre seguranca, IoT medico e LGPD.
+- `document/ai_project_document_fiap.md` - documento mestre seguindo o Template FIAP.
+
 ## Links para entrega
 
 - GitHub publico: <https://github.com/marcofiap/CardioIA-Fase3-Cap1>
@@ -237,13 +294,17 @@ A validacao local de firmware, JSONs, REST/e-mail, MQTT e notebook esta document
 - [x] ESP32 com no minimo dois sensores.
 - [x] DHT22 para temperatura e umidade.
 - [x] Sensor adicional de pulso simulado por botao.
+- [x] MPU6050 (acelerometro) para movimento, alinhado com Cap 8 e 9 da Fase 3.
 - [x] Processamento local e regras de alerta na borda.
 - [x] Resiliencia offline por fila circular limitada.
 - [x] Envio de dados via MQTT.
-- [x] Dashboard Node-RED com grafico, gauge e alerta.
-- [x] Relatorios das Partes 1 e 2.
+- [x] Dashboard Node-RED com grafico, gauge, alerta e indicador de movimento.
+- [x] Relatorios das Partes 1 e 2 (acima do minimo de paginas).
 - [x] Ir Alem 1 com REST, risco e e-mail.
-- [x] Ir Alem 2 com comparacao entre modelo tradicional e neuromorfico.
+- [x] Ir Alem 2 com comparacao entre modelo tradicional e neuromorfico em dois cenarios.
+- [x] Reflexao dedicada de seguranca, IoT medico e LGPD (`docs/reflexao_seguranca_lgpd.md`).
+- [x] Documento mestre seguindo Template FIAP (`document/ai_project_document_fiap.md`).
+- [x] Diagrama de arquitetura Edge/Fog/Cloud no README e nos relatorios.
 - [ ] Link publico do Wokwi preenchido.
 - [ ] Prints da execucao anexados.
 - [ ] Link do video de ate 4 minutos preenchido.

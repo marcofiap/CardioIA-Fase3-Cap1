@@ -17,15 +17,19 @@ class VitalReading:
     temperature: float
     humidity: float
     movement: int
+    accel_magnitude: float | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        payload: dict[str, Any] = {
             "patientId": self.patient_id,
             "bpm": self.bpm,
             "temperature": self.temperature,
             "humidity": self.humidity,
             "movement": self.movement,
         }
+        if self.accel_magnitude is not None:
+            payload["accelMagnitude"] = self.accel_magnitude
+        return payload
 
 
 class CardioIaApiClient:
@@ -149,6 +153,7 @@ def main() -> None:
         temperature=38.4,
         humidity=54.0,
         movement=1,
+        accel_magnitude=11.4,
     )
 
     stored = client.send_reading(reading)
