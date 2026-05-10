@@ -263,6 +263,8 @@ flowchart LR
         F1[mqtt in] --> F2[function<br/>Normalizar e separar]
         F2 --> F3[ui_chart BPM]
         F2 --> F4[ui_gauge Temperatura]
+        F2 --> F4b[ui_gauge Umidade]
+        F2 --> F4c[ui_gauge Magnitude]
         F2 --> F5[ui_text Alerta]
         F2 --> F6[ui_template LED virtual]
         F2 --> F7[ui_text Movimento]

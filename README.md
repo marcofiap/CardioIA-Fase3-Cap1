@@ -48,6 +48,8 @@ flowchart LR
         F1[mqtt in] --> F2[function<br/>Normalizar e separar]
         F2 --> F3[ui_chart BPM]
         F2 --> F4[ui_gauge Temperatura]
+        F2 --> F4b[ui_gauge Umidade]
+        F2 --> F4c[ui_gauge Magnitude]
         F2 --> F5[ui_text Alerta]
         F2 --> F6[ui_template LED virtual]
         F2 --> F7[ui_text Movimento]
@@ -170,7 +172,7 @@ Se o Wi-Fi conectar, mas o Node-RED nao receber os dados, confira no Monitor Ser
 
 - `MQTT conectado.` e `MQTT publicado:` indicam que o ESP32 enviou para o broker.
 - `Publicacao bloqueada: MQTT nao conectado` indica problema entre o Wokwi e o broker.
-- O dashboard atual mostra BPM no grafico e temperatura no gauge; ao alterar a temperatura do DHT22, espere ate 5 segundos para a proxima amostra.
+- O dashboard inclui gauges de temperatura, umidade e magnitude do acelerometro, alem do grafico de BPM, indicadores textuais de alerta e movimento e LED virtual; ao alterar a temperatura do DHT22 ou movimentar o slider do MPU6050, espere ate 5 segundos para a proxima amostra.
 
 ### Dashboard Node-RED
 
@@ -298,7 +300,7 @@ A validacao local de firmware, JSONs, REST/e-mail, MQTT e notebook esta document
 - [x] Processamento local e regras de alerta na borda.
 - [x] Resiliencia offline por fila circular limitada.
 - [x] Envio de dados via MQTT.
-- [x] Dashboard Node-RED com grafico, gauge, alerta e indicador de movimento.
+- [x] Dashboard Node-RED com grafico de BPM, gauges (temperatura, umidade, magnitude do acelerometro), texto de alerta, LED virtual e indicador de movimento.
 - [x] Relatorios das Partes 1 e 2 (acima do minimo de paginas).
 - [x] Ir Alem 1 com REST, risco e e-mail.
 - [x] Ir Alem 2 com comparacao entre modelo tradicional e neuromorfico em dois cenarios.

@@ -24,7 +24,7 @@
 | Broker MQTT | Atendido | HiveMQ publico configurado por padrao; Mosquitto local opcional em `config/mosquitto.conf` |
 | Dashboard Node-RED | Atendido | Export em `src/node-red/flows_cardioia_node_red.json` |
 | Grafico de sinal vital | Atendido | `ui_chart` para BPM |
-| Gauge de parametro | Atendido | `ui_gauge` para temperatura |
+| Gauge de parametro | Atendido com folga | `ui_gauge` para temperatura, umidade e magnitude do acelerometro |
 | Indicador visual de alerta | Atendido | `ui_text` e LED virtual em `ui_template`, alem de `ui_text` para movimento |
 | Prints ou export do dashboard | Parcial | Export incluido; faltam prints reais em `assets/evidencias/` |
 | Relatorio minimo de duas paginas | Atendido com folga | `docs/relatorio_parte2_mqtt_dashboard.md` (com diagramas, tabelas e mapeamento Node-RED) |

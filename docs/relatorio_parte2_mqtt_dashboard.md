@@ -108,9 +108,11 @@ src/node-red/flows_cardioia_node_red.json
 |---|---|---|
 | `MQTT CardioIA` | `mqtt in` | assina `fiap/cardioia/grupo57/vitals` no broker configurado |
 | `Teste dashboard` | `inject` | dispara um payload mock para validar o dashboard sem o ESP32 |
-| `Normalizar, logar e separar` | `function` | converte string/Buffer em objeto, valida campos, gera log e divide em 6 saidas |
+| `Normalizar, logar e separar` | `function` | converte string/Buffer em objeto, valida campos, gera log e divide em 8 saidas |
 | `BPM em tempo real` | `ui_chart` | grafico de linha de batimentos (eixo Y de 40 a 180) |
 | `Temperatura` | `ui_gauge` | gauge corporal de 30 a 42 C com bandas verde/amarelo/vermelho |
+| `Umidade` | `ui_gauge` | gauge de 0 a 100% com banda saudavel entre 30 e 70 |
+| `Magnitude aceleracao` | `ui_gauge` | gauge da magnitude do vetor de aceleracao (m/s^2), banda verde proxima de 9.8 (gravidade) |
 | `Texto de alerta` | `ui_text` | mostra `Normal` ou `ALERTA: avaliar paciente` |
 | `LED virtual` | `ui_template` | bola colorida vermelha/verde com sombra, refletindo o estado de alerta |
 | `Movimento atual` | `ui_text` | mostra `Em movimento` ou `Em repouso` a partir do MPU6050 |
@@ -121,8 +123,10 @@ src/node-red/flows_cardioia_node_red.json
 
 - **Grafico de BPM**: pedido explicito do enunciado como sinal vital escolhido pelo grupo.
 - **Gauge de temperatura**: gauge claro com bandas faceis de interpretar pelo profissional de saude.
+- **Gauge de umidade**: o DHT22 fornece um segundo canal (umidade) que merece ser exibido como sinal vital de ambiente; usamos faixa verde entre 30 e 70% como conforto.
+- **Gauge de magnitude do acelerometro**: complementa o texto de movimento mostrando quanta variacao instantanea o MPU6050 esta detectando; em repouso fica proximo de 9.8 m/s^2 (gravidade).
 - **Texto + LED virtual**: redundancia visual exigida pelo enunciado; um e textual, o outro e visual e tem sombra colorida quando ativo.
-- **Movimento**: refleve o terceiro sensor pedido implicitamente pelo enunciado ("ausencia de movimento" e citado como exemplo de risco).
+- **Texto de movimento**: traduz o `movement` (0/1) em algo legivel para o operador.
 - **Debug node** mantido ativo durante a entrega: facil para a banca verificar o payload bruto recebido em `/ui` ou no editor.
 
 ### 4.4 Como rodar localmente

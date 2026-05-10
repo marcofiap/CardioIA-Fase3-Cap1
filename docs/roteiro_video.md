@@ -23,7 +23,7 @@ Mostrar:
 
 - topico MQTT `fiap/cardioia/grupo57/vitals`;
 - fluxo Node-RED importado;
-- dashboard com grafico de BPM, gauge de temperatura, indicador de movimento, texto de alerta e LED virtual;
+- dashboard com grafico de BPM, gauges de temperatura, umidade e magnitude do acelerometro, indicador de movimento, texto de alerta e LED virtual;
 - citar HiveMQ Cloud com TLS como upgrade para producao.
 
 Explicar que o ESP32 publica dados e o Node-RED consome e visualiza em tempo real.
