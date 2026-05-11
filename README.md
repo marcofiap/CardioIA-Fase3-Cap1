@@ -277,7 +277,7 @@ python scripts/compute_ir_alem2_metrics.py
 ## Links para entrega
 
 - GitHub publico: <https://github.com/marcofiap/CardioIA-Fase3-Cap1>
-- Link Wokwi: `INSERIR_LINK_DO_WOKWI`
+- Link Wokwi: `https://wokwi.com/projects/463762306698217473`
 - Link video YouTube nao listado: `INSERIR_LINK_DO_VIDEO`
 
 ## Evidencias para anexar antes da entrega final

@@ -101,4 +101,4 @@ O mesmo schema e consumido pelo dashboard Node-RED da Parte 2 e pelo cliente RES
 
 Preencher apos publicacao do projeto:
 
-`INSERIR_LINK_DO_WOKWI`
+`https://wokwi.com/projects/463762306698217473`
