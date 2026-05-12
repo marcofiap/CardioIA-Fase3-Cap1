@@ -48,7 +48,7 @@ Comando:
 node scripts/mqtt_loopback_test.js
 ```
 
-Resultado: o cliente assinou o topico `fiap/cardioia/grupo57/vitals`, publicou uma mensagem de teste no broker publico `broker.hivemq.com:1883` e recebeu o payload de volta.
+Resultado: o cliente assinou o topico `fiap/cardioia/grupo59/vitals`, publicou uma mensagem de teste no broker publico `broker.hivemq.com:1883` e recebeu o payload de volta.
 
 ## Notebook Ir Alem 2
 

@@ -8,7 +8,7 @@
 
 **FIAP | Tecnologo em Inteligencia Artificial | Fase 3 | Capitulo 1**
 
-## Grupo 57
+## Grupo 59
 
 | Integrante | GitHub |
 |---|---|
@@ -41,7 +41,7 @@ flowchart LR
     end
 
     subgraph CLOUD [Cloud - Broker MQTT]
-        B[(HiveMQ public ou Cloud<br/>topico fiap/cardioia/grupo57/vitals)]
+        B[(HiveMQ public ou Cloud<br/>topico fiap/cardioia/grupo59/vitals)]
     end
 
     subgraph FOG [Fog - Node-RED local]
@@ -214,7 +214,7 @@ node-red --userDir ~/.node-red
 Quando o Wokwi publicar, o terminal deve exibir linhas parecidas com:
 
 ```text
-CardioIA MQTT recebido: {"deviceId":"cardioia-esp32-grupo57","temperature":39.4,"humidity":40,"bpm":88,"alert":true}
+CardioIA MQTT recebido: {"deviceId":"cardioia-esp32-grupo59","temperature":39.4,"humidity":40,"bpm":88,"alert":true}
 ```
 
 Para publicar uma mensagem de teste no mesmo topico:
@@ -278,7 +278,7 @@ python scripts/compute_ir_alem2_metrics.py
 
 - GitHub publico: <https://github.com/marcofiap/CardioIA-Fase3-Cap1>
 - Link Wokwi: `https://wokwi.com/projects/463762306698217473`
-- Link video YouTube nao listado: `INSERIR_LINK_DO_VIDEO`
+- Link video YouTube nao listado: `https://youtu.be/gkBeKeCoAkU`
 
 ## Evidencias para anexar antes da entrega final
 
@@ -307,9 +307,9 @@ A validacao local de firmware, JSONs, REST/e-mail, MQTT e notebook esta document
 - [x] Reflexao dedicada de seguranca, IoT medico e LGPD (`docs/reflexao_seguranca_lgpd.md`).
 - [x] Documento mestre seguindo Template FIAP (`document/ai_project_document_fiap.md`).
 - [x] Diagrama de arquitetura Edge/Fog/Cloud no README e nos relatorios.
-- [ ] Link publico do Wokwi preenchido.
-- [ ] Prints da execucao anexados.
-- [ ] Link do video de ate 4 minutos preenchido.
+- [x] Link publico do Wokwi preenchido.
+- [x] Prints da execucao anexados.
+- [x] Link do video de ate 4 minutos preenchido.
 
 ## Observacao academica
 

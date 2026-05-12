@@ -2,7 +2,7 @@
 
 # AI Project Document - CardioIA Conectada
 
-**FIAP | Tecnologo em Inteligencia Artificial | Fase 3 | Capitulo 1 | Grupo 57**
+**FIAP | Tecnologo em Inteligencia Artificial | Fase 3 | Capitulo 1 | Grupo 59**
 
 ## Integrantes do grupo
 
@@ -272,7 +272,7 @@ flowchart LR
     end
 
     subgraph CLOUD [Cloud - Broker MQTT]
-        B[HiveMQ public ou Cloud<br/>topico fiap/cardioia/grupo57/vitals]
+        B[HiveMQ public ou Cloud<br/>topico fiap/cardioia/grupo59/vitals]
     end
 
     subgraph IRALEM1 [Ir Alem 1 - REST + E-mail]
@@ -294,7 +294,7 @@ flowchart LR
 
 ```json
 {
-  "deviceId": "cardioia-esp32-grupo57",
+  "deviceId": "cardioia-esp32-grupo59",
   "timestamp": 123456,
   "temperature": 36.8,
   "humidity": 52.4,

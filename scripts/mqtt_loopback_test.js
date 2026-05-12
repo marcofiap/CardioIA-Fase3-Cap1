@@ -1,7 +1,7 @@
 const mqtt = require(process.env.USERPROFILE + "/.node-red/node_modules/mqtt");
 
 const brokerUrl = process.env.MQTT_URL || "mqtt://broker.hivemq.com:1883";
-const topic = process.env.MQTT_TOPIC || "fiap/cardioia/grupo57/vitals";
+const topic = process.env.MQTT_TOPIC || "fiap/cardioia/grupo59/vitals";
 const payload = {
   deviceId: "teste-loopback",
   timestamp: Date.now(),

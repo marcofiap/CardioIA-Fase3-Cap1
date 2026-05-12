@@ -20,7 +20,7 @@
 
 | Exigencia | Status | Evidencia |
 |---|---:|---|
-| Envio via MQTT | Atendido | `PubSubClient`, topico `fiap/cardioia/grupo57/vitals` |
+| Envio via MQTT | Atendido | `PubSubClient`, topico `fiap/cardioia/grupo59/vitals` |
 | Broker MQTT | Atendido | HiveMQ publico configurado por padrao; Mosquitto local opcional em `config/mosquitto.conf` |
 | Dashboard Node-RED | Atendido | Export em `src/node-red/flows_cardioia_node_red.json` |
 | Grafico de sinal vital | Atendido | `ui_chart` para BPM |

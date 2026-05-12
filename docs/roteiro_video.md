@@ -21,7 +21,7 @@ Explicar que a fila circular de 120 amostras representa resiliencia offline no s
 
 Mostrar:
 
-- topico MQTT `fiap/cardioia/grupo57/vitals`;
+- topico MQTT `fiap/cardioia/grupo59/vitals`;
 - fluxo Node-RED importado;
 - dashboard com grafico de BPM, gauges de temperatura, umidade e magnitude do acelerometro, indicador de movimento, texto de alerta e LED virtual;
 - citar HiveMQ Cloud com TLS como upgrade para producao.

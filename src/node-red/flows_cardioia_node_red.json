@@ -4,14 +4,14 @@
     "type": "tab",
     "label": "CardioIA Conectada",
     "disabled": false,
-    "info": "Fluxo FIAP Grupo 57 para ESP32 -> MQTT -> Dashboard"
+    "info": "Fluxo FIAP Grupo 59 para ESP32 -> MQTT -> Dashboard"
   },
   {
     "id": "mqtt-cardioia",
     "type": "mqtt in",
     "z": "cardioia-tab",
     "name": "MQTT CardioIA",
-    "topic": "fiap/cardioia/grupo57/vitals",
+    "topic": "fiap/cardioia/grupo59/vitals",
     "qos": "0",
     "datatype": "auto-detect",
     "broker": "broker-hivemq-public",

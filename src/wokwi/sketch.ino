@@ -24,7 +24,7 @@ const char *MQTT_SERVER = "broker.hivemq.com";
 const int MQTT_PORT = 1883;
 const char *MQTT_USER = "";
 const char *MQTT_PASSWORD = "";
-const char *MQTT_TOPIC = "fiap/cardioia/grupo57/vitals";
+const char *MQTT_TOPIC = "fiap/cardioia/grupo59/vitals";
 
 const unsigned long SAMPLE_INTERVAL_MS = 5000;
 const unsigned long BPM_WINDOW_MS = 15000;
@@ -91,7 +91,7 @@ bool dequeueSample(VitalSample &sample) {
 String sampleToJson(const VitalSample &sample) {
   // Mantem o mesmo schema usado pelo dashboard Node-RED e pelo cliente REST do Ir Alem 1.
   String payload = "{";
-  payload += "\"deviceId\":\"cardioia-esp32-grupo57\",";
+  payload += "\"deviceId\":\"cardioia-esp32-grupo59\",";
   payload += "\"timestamp\":" + String(sample.timestamp) + ",";
   payload += "\"temperature\":" + String(sample.temperature, 1) + ",";
   payload += "\"humidity\":" + String(sample.humidity, 1) + ",";
@@ -185,7 +185,7 @@ void ensureMqtt() {
     return;
   }
 
-  String clientId = "cardioia-grupo57-" + String(random(0xffff), HEX);
+  String clientId = "cardioia-grupo59-" + String(random(0xffff), HEX);
   Serial.print("Conectando ao broker MQTT ");
   Serial.print(MQTT_SERVER);
   Serial.print(":");

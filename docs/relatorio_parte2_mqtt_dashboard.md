@@ -18,7 +18,7 @@ A Parte 2 conecta o ESP32 simulado a uma camada de visualizacao em tempo real, i
 Cada amostra publicada pelo ESP32 viaja como mensagem MQTT no topico:
 
 ```text
-fiap/cardioia/grupo57/vitals
+fiap/cardioia/grupo59/vitals
 ```
 
 O Node-RED atua como camada de Fog: consome o topico, normaliza o JSON, separa as variaveis para os widgets do dashboard e tambem encaminha o payload original para um node de debug. O broker, hospedado como servico publico (HiveMQ) ou em conta gerenciada (HiveMQ Cloud), representa a camada Cloud da arquitetura.
@@ -29,7 +29,7 @@ Toda mensagem segue o mesmo schema, alinhado com o cliente REST do Ir Alem 1:
 
 ```json
 {
-  "deviceId": "cardioia-esp32-grupo57",
+  "deviceId": "cardioia-esp32-grupo59",
   "timestamp": 123456,
   "temperature": 36.8,
   "humidity": 52.4,
@@ -64,7 +64,7 @@ const char *MQTT_SERVER = "broker.hivemq.com";
 const int   MQTT_PORT   = 1883;
 const char *MQTT_USER   = "";
 const char *MQTT_PASSWORD = "";
-const char *MQTT_TOPIC = "fiap/cardioia/grupo57/vitals";
+const char *MQTT_TOPIC = "fiap/cardioia/grupo59/vitals";
 ```
 
 A publicacao usa `mqtt.publish(MQTT_TOPIC, payload.c_str(), true)` com `retained=true`, garantindo que um novo subscriber receba imediatamente a ultima leitura.
@@ -106,7 +106,7 @@ src/node-red/flows_cardioia_node_red.json
 
 | Node | Tipo | Funcao |
 |---|---|---|
-| `MQTT CardioIA` | `mqtt in` | assina `fiap/cardioia/grupo57/vitals` no broker configurado |
+| `MQTT CardioIA` | `mqtt in` | assina `fiap/cardioia/grupo59/vitals` no broker configurado |
 | `Teste dashboard` | `inject` | dispara um payload mock para validar o dashboard sem o ESP32 |
 | `Normalizar, logar e separar` | `function` | converte string/Buffer em objeto, valida campos, gera log e divide em 8 saidas |
 | `BPM em tempo real` | `ui_chart` | grafico de linha de batimentos (eixo Y de 40 a 180) |

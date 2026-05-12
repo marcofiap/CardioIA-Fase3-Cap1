@@ -25,7 +25,7 @@ Riscos:
 
 Controles aplicados na entrega academica:
 
-- nenhum dado pessoal no firmware: o `deviceId` e um identificador tecnico (`cardioia-esp32-grupo57`), nao o nome do paciente;
+- nenhum dado pessoal no firmware: o `deviceId` e um identificador tecnico (`cardioia-esp32-grupo59`), nao o nome do paciente;
 - regras simples e auditaveis (`>38 C`, `>120 bpm`) no firmware;
 - LED claramente rotulado como `ALERTA`, nao como `DIAGNOSTICO`.
 
@@ -62,7 +62,7 @@ Controles recomendados para producao:
 Riscos:
 
 - broker publico (HiveMQ public) e visivel a qualquer pessoa que assine o topico;
-- topico previsivel (`fiap/cardioia/grupo57/vitals`);
+- topico previsivel (`fiap/cardioia/grupo59/vitals`);
 - ausencia de ACL.
 
 Controles aplicados na entrega academica:
@@ -114,7 +114,7 @@ A Lei Geral de Protecao de Dados (Lei 13.709/2018) classifica dados de saude com
 Decisoes aplicadas a entrega academica:
 
 - nenhum dado real de paciente foi capturado;
-- todos os identificadores sao ficticios (`paciente-simulado-001`, `cardioia-esp32-grupo57`);
+- todos os identificadores sao ficticios (`paciente-simulado-001`, `cardioia-esp32-grupo59`);
 - relatorios e codigo nao contem CPF, RG, nome ou data de nascimento.
 
 Recomendacoes para evolucao real:
@@ -142,8 +142,8 @@ Mesmo com a melhor seguranca tecnica, e fundamental:
 |---|---|---|---|
 | Wi-Fi | `Wokwi-GUEST` sem senha | facilita simulacao no Wokwi | aceitavel - simulacao academica |
 | MQTT | broker publico HiveMQ:1883 | facilita correcao | dados nao sao sensiveis na simulacao |
-| Topico | `fiap/cardioia/grupo57/vitals` | identificador academico | sem PII |
-| Identificador | `cardioia-esp32-grupo57` | identificador tecnico | nao reidentificavel |
+| Topico | `fiap/cardioia/grupo59/vitals` | identificador academico | sem PII |
+| Identificador | `cardioia-esp32-grupo59` | identificador tecnico | nao reidentificavel |
 | Email | simulado no console | nao expor SMTP | aceitavel |
 | Dataset IA | sintetico | nao usar dado clinico | viesses sao ilustrativos |
 | LED de alerta | rotulo `ALERTA` no Wokwi | clareza ao avaliador | nao se confunde com diagnostico |

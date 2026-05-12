@@ -47,7 +47,7 @@ Tambem ha uma chave deslizante usada como variavel booleana de conectividade Wi-
    - calcula movimento como variacao da magnitude do vetor de aceleracao (`|delta| > 0.4 m/s^2 -> movement = 1`);
    - aplica regras locais de alerta (`temperatura > 38 C` ou `BPM > 120`) e atualiza o LED de alerta na borda.
 3. **Decisao de transporte**:
-   - se a chave esta em `ONLINE` e ha Wi-Fi e MQTT, publica o JSON no topico `fiap/cardioia/grupo57/vitals` com flag `retained=true`;
+   - se a chave esta em `ONLINE` e ha Wi-Fi e MQTT, publica o JSON no topico `fiap/cardioia/grupo59/vitals` com flag `retained=true`;
    - caso contrario, enfileira a amostra na fila circular local de 120 posicoes.
 4. **Sincronizacao** automatica: quando a conectividade volta, `syncOfflineQueue()` drena a fila publicando uma amostra de cada vez e logando cada publicacao no Serial.
 5. **Heartbeat**: a cada 2 segundos o firmware imprime no Serial um resumo (`HB millis= wifi= mqtt= online= fila=`) que ajuda diagnosticar a simulacao no Wokwi e nas evidencias do video.
@@ -77,7 +77,7 @@ Cada amostra coletada vira o seguinte JSON (publicado por MQTT ou logado por Ser
 
 ```json
 {
-  "deviceId": "cardioia-esp32-grupo57",
+  "deviceId": "cardioia-esp32-grupo59",
   "timestamp": 123456,
   "temperature": 36.8,
   "humidity": 52.4,
